@@ -45,17 +45,38 @@
 
     <!-- ===================== INICIO / IDENTIDAD DEL JUEGO ===================== -->
     <section id="inicio" class="hero">
-      <p class="hero__ojo">RPG táctico narrativo · pixelart 2D</p>
-      <h1 class="hero__titulo">Felinaria</h1>
-      <p class="hero__subtitulo">
-        Un aprendiz felino, una profecía olvidada y dos manadas al borde de una guerra
-        que ninguna de las dos quiso empezar.
-      </p>
-      <div class="hero__ficha">
-        <span class="ficha">Clasificación E10+</span>
-        <span class="ficha">Aventura narrativa · RPG ligero</span>
-        <span class="ficha">Combate táctico por turnos</span>
+      <div class="hero__fondo-ambiente"></div>
+      <div class="hero__contenedor">
+        <div class="hero__emblema">
+          <img src="images/logo-felinaria.svg" alt="Emblema Felinaria" width="64" height="64">
+        </div>
+        <p class="hero__ojo">RPG táctico narrativo · Pixelart 2D</p>
+        <h1 class="hero__titulo">Felinaria</h1>
+        <p class="hero__lema">El último presagio</p>
+        <p class="hero__subtitulo">
+          Un aprendiz felino, una profecía olvidada y dos manadas al borde de una guerra
+          que ninguna de las dos quiso empezar.
+        </p>
+
+        <div class="hero__acciones">
+          <a href="#historia" class="boton-oro">
+            <span>Descubrir la Historia</span>
+            <svg class="icono-flecha" viewBox="0 0 20 20" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M10 3a.75.75 0 01.75.75v10.69l3.72-3.72a.75.75 0 111.06 1.06l-5 5a.75.75 0 01-1.06 0l-5-5a.75.75 0 111.06-1.06l3.72 3.72V3.75A.75.75 0 0110 3z"/></svg>
+          </a>
+          <a href="#personajes" class="boton-pergamino">Explorar Personajes</a>
+        </div>
+
+        <div class="hero__ficha">
+          <span class="ficha">Clasificación E10+</span>
+          <span class="ficha">Aventura narrativa · RPG ligero</span>
+          <span class="ficha">Combate táctico por turnos</span>
+        </div>
       </div>
+
+      <a href="#historia" class="hero__scroll" aria-label="Desplazar hacia la historia">
+        <span class="hero__scroll-etiqueta">Continuar</span>
+        <span class="hero__scroll-icono" aria-hidden="true"></span>
+      </a>
     </section>
 
     <!-- ===================== HISTORIA Y OBJETIVO ===================== -->
