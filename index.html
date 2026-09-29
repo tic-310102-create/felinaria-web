@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Felinaria · El último presagio</title>
+  <meta name="description" content="Felinaria: RPG táctico narrativo 2D pixelart sobre Colonias felinas, una profecía y una alianza prohibida.">
+
+  <!-- Tipografías de marca -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos del sitio -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/logo-felinaria.svg" type="image/svg+xml">
+</head>
+<body>
+
+  <!-- ===================== CABECERA / NAVEGACIÓN ===================== -->
+  <header class="cabecera">
+    <div class="cabecera__interior">
+      <a href="#inicio" class="marca">
+        <img src="images/logo-felinaria.svg" alt="" width="32" height="32">
+        <span class="marca__nombre">Felinaria</span>
+      </a>
+
+      <button class="boton-menu" id="botonMenu" aria-expanded="false" aria-controls="navPrincipal">
+        Menú
+      </button>
+
+      <nav class="nav-principal" id="navPrincipal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#historia">Historia</a></li>
+          <li><a href="#personajes">Personajes</a></li>
+          <li><a href="#mecanicas">Mecánicas</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#equipo">Equipo</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== INICIO / IDENTIDAD DEL JUEGO ===================== -->
+    <section id="inicio" class="hero">
+      <p class="hero__ojo">RPG táctico narrativo · pixelart 2D</p>
+      <h1 class="hero__titulo">Felinaria</h1>
+      <p class="hero__subtitulo">
+        Un aprendiz felino, una profecía olvidada y dos manadas al borde de una guerra
+        que ninguna de las dos quiso empezar.
+      </p>
+      <div class="hero__ficha">
+        <span class="ficha">Clasificación E10+</span>
+        <span class="ficha">Aventura narrativa · RPG ligero</span>
+        <span class="ficha">Combate táctico por turnos</span>
+      </div>
+    </section>
+
+    <!-- ===================== HISTORIA Y OBJETIVO ===================== -->
+    <section id="historia" class="seccion">
+      <div class="seccion__cabecera">
+        <p class="seccion__numero">Historia</p>
+        <h2 class="seccion__titulo">Una alianza que nadie esperaba</h2>
+      </div>
+
+      <div class="historia__cuerpo">
+        <p>
+          En las Colonias felinas, ser distinto puede costarte el hogar. Rosa fue expulsada
+          de la suya sin más razón que la desconfianza de los demás. Rastrojo, un guerrero
+          harto de las leyes de su propia Colonia, rompió con ella para aliarse con la Manada
+          del Colmillo: los perros salvajes que durante generaciones fueron el enemigo de
+          todo gato.
+        </p>
+        <p>
+          En medio de ese conflicto, un joven aprendiz encuentra en una bolsa abandonada a un
+          gatito blanco recién nacido: el hijo que Rosa perdió. Sin saberlo todavía, ese
+          aprendiz es el cachorro que una vieja profecía señala como quien decidirá el destino
+          de las Colonias.
+        </p>
+        <p class="historia__objetivo">
+          <strong>Objetivo del jugador:</strong> guiar a este aprendiz —personalizable en
+          pelaje y nombre— a través de batallas tácticas por turnos y decisiones narrativas
+          que determinan si las Colonias sobreviven divididas o encuentran una forma de
+          convivir con la Manada del Colmillo.
+        </p>
+
+        <button class="historia__boton" id="botonHistoria" aria-expanded="false" aria-controls="historiaCompleta">Leer la historia completa</button>
+
+        <div class="historia__completa" id="historiaCompleta" hidden>
+          <p>En épocas antiguas, cuando el mundo era joven y los bosques no tenían nombre, existían los grandes felinos. Fuertes. Feroces. Dueños de la tierra. Pero ni su fuerza ni sus colmillos bastaron para protegerlos de los peligros que acechaban fuera de sus guaridas. Uno a uno fueron cayendo, hasta que los dioses, apiadados, decidieron darles un nuevo cuerpo. Pequeño. Veloz. Hecho para esconderse entre las raíces y sobrevivir en las profundidades del bosque.</p>
+          <p>Así nacieron los gatos.</p>
+          <p>Los gatos, temerosos de volver a ser cazados hasta la extinción, formaron Colonias: grupos donde cada gato tenía un lugar, una tarea y un propósito. Con el paso de las generaciones, las Colonias crecieron y se expandieron. Cada una desarrolló sus propias costumbres, sus propias creencias, su propia forma de sobrevivir. Algunas se establecieron junto a los ríos, donde el agua nunca se detenía. Otras entre los árboles más antiguos, cuyas ramas tocaban el cielo. Y unas pocas en las zonas más alejadas, donde pocos depredadores se atrevían a llegar.</p>
+          <p>Durante muchas generaciones, las Colonias vivieron en paz. Intercambiaban presas, compartían información sobre los peligros del bosque y se ayudaban cuando algún territorio era amenazado. No eran amigas. Pero tampoco enemigas.</p>
+          <p>Sin embargo, mantener la paz nunca fue sencillo. Las disputas por los territorios, el alimento y las decisiones de los líderes provocaron conflictos. Algunas Colonias llegaron incluso a enfrentarse entre sí. Con el tiempo, los gatos crearon reglas para evitar que aquellas disputas terminaran destruyéndolos. Las jerarquías y las tradiciones se volvieron una parte importante de la vida de las Colonias. Para algunos gatos, aquellas reglas representaban la razón por la que habían conseguido sobrevivir durante tantas generaciones.</p>
+          <p>Pero no todos pensaban de la misma manera.</p>
+          <p>En una época más reciente, un gato llamado Rastrojo comenzó a cuestionar el sistema de las Colonias. Rastrojo creía que las jerarquías solamente servían para que unos pocos gatos tuvieran poder sobre los demás. Para él, los territorios y las reglas no protegían a los gatos: los mantenían separados. Con el tiempo, su rechazo hacia las Colonias se convirtió en resentimiento.</p>
+          <p>Rastrojo comenzó a reunir gatos que compartían sus ideas y atacó algunos de los límites territoriales. No buscaba conquistar una Colonia ni convertirse en su líder. Su objetivo era diferente: quería destruir las reglas que mantenían el orden entre ellas y demostrar que los gatos podían sobrevivir sin líderes, territorios ni jerarquías.</p>
+          <p>Sin embargo, los ataques de Rastrojo provocaron conflictos y terminaron poniendo en peligro a muchos gatos. Las Colonias decidieron detenerlo y expulsarlo de sus territorios.</p>
+          <p>Rastrojo desapareció en el bosque.</p>
+          <p>Durante mucho tiempo nadie volvió a saber de él.</p>
+          <p>Hasta que encontró aliados inesperados.</p>
+          <p>En las zonas más alejadas del territorio vivía una comunidad de perros salvajes conocida como la Manada del Colmillo. Los perros no compartían las costumbres de los gatos y durante generaciones habían competido por los mismos territorios y recursos. Rastrojo se acercó a ellos y les ofreció un trato. Los perros lo ayudarían a debilitar a las Colonias y, a cambio, tendrían acceso a territorios que hasta entonces habían pertenecido a los gatos.</p>
+          <p>La alianza comenzó a crecer en secreto.</p>
+          <p>Pero Rastrojo no fue el único gato que guardaba rencor hacia las Colonias.</p>
+          <p>Mucho antes de que comenzaran los ataques, una gata llamada Rosa había pertenecido a la Colonia del protagonista. Rosa era una gata inteligente y habilidosa, pero terminó siendo acusada de un acto que no había cometido. A pesar de intentar demostrar su inocencia, los líderes de la Colonia decidieron expulsarla.</p>
+          <p>Para Rosa, aquello significó perderlo todo. Su hogar, su posición y a los gatos que alguna vez consideró su familia. Durante mucho tiempo vivió sola en el bosque. El resentimiento que sentía hacia la Colonia fue creciendo hasta convertirse en una parte de su vida.</p>
+          <p>Fue entonces cuando Rastrojo la encontró.</p>
+          <p>Él conocía su historia y sabía que había sido expulsada injustamente. Le contó que su situación era una prueba de que las Colonias estaban podridas desde sus raíces y que ningún gato debía volver a vivir bajo sus reglas. Rosa no confiaba completamente en él, pero compartía su resentimiento.</p>
+          <p>Así comenzó una alianza que cambiaría el destino de las Colonias.</p>
+          <p>Mientras Rastrojo reunía fuerzas junto a la Manada del Colmillo, Rosa se encargaba de obtener información sobre la Colonia que alguna vez había sido su hogar.</p>
+          <p>Pero había algo que Rastrojo no le había contado.</p>
+          <p>Él no quería simplemente demostrar que las Colonias estaban equivocadas.</p>
+          <p>Quería destruirlas.</p>
+          <p>Su verdadero objetivo era provocar suficientes conflictos para que los gatos comenzaran a desconfiar unos de otros. Si las Colonias dejaban de ayudarse, sería mucho más sencillo derrotarlas una por una.</p>
+          <p>Rosa comenzó a darse cuenta de que el plan iba mucho más lejos de lo que había imaginado. Sin embargo, para entonces ya era demasiado tarde para abandonar la alianza sin consecuencias.</p>
+          <p>Mientras estos acontecimientos ocurrían lejos de los ojos de los demás gatos, dentro de la Colonia del protagonista nacía un cachorro que sería considerado especial. Desde pequeño, algunos miembros de la Colonia comenzaron a relacionarlo con una antigua profecía.</p>
+          <p>La profecía decía:</p>
+          <blockquote class="historia__profecia">“Cuando llegue aquel que cambie el destino de las Colonias, los gatos deberán decidir qué están dispuestos a sacrificar para proteger aquello que consideran suyo.”</blockquote>
+          <p>Nadie sabía exactamente qué significaba. Algunos pensaban que hablaba de un gran guerrero. Otros creían que se trataba de un futuro líder capaz de unir a las Colonias.</p>
+          <p>El cachorro creció escuchando aquellas historias. Con el tiempo, comenzó a creer que su vida tenía un propósito especial. Cuando finalmente llegó el momento de convertirse en escudero, fue puesto bajo el entrenamiento del Señor de su Colonia. Allí aprendería a combatir, desplazarse por el territorio y proteger a otros gatos.</p>
+          <p>Sin saberlo, mientras él se preparaba para convertirse en guerrero, Rastrojo y la Manada del Colmillo comenzaban a acercarse cada vez más al territorio.</p>
+          <p>La primera señal del conflicto llegaría durante una misión.</p>
+          <p>El protagonista sería enviado junto a otros gatos para revisar una zona cercana a los límites de la Colonia. Durante el recorrido encontrarían señales de que algo estaba alterando el equilibrio del bosque.</p>
+          <p>Huellas de perros. Territorios marcados. Y rastros que pertenecían a gatos que ya no deberían encontrarse allí.</p>
+          <p>Sin embargo, entre todo aquello habría algo que el protagonista no esperaba encontrar.</p>
+          <p>Un pequeño maullido proveniente de unos arbustos.</p>
+          <p>Al acercarse descubriría a un gatito atrapado dentro de una bolsa abandonada.</p>
+          <p>Era completamente blanco.</p>
+          <p>El protagonista no sabría quién era, de dónde había venido ni por qué estaba solo. Tampoco sabría que aquel pequeño estaba relacionado con una historia que la Colonia había intentado olvidar. Porque el gatito era hijo de Rosa.</p>
+          <p>Y su existencia sería el detonante que terminaría conectando el pasado de Rosa, los planes de Rastrojo y el destino del protagonista.</p>
+          <p>A partir de ese momento, el protagonista tendrá que decidir qué hacer con el gatito mientras los conflictos entre las Colonias aumentan.</p>
+          <p>Lo que comenzó como una simple misión terminará revelando que la mayor amenaza para las Colonias no se encuentra únicamente fuera de sus territorios.</p>
+          <p>También se encuentra en las heridas que dejaron atrás.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PERSONAJES ===================== -->
+    <section id="personajes" class="seccion">
+      <div class="seccion__cabecera">
+        <p class="seccion__numero">Personajes</p>
+        <h2 class="seccion__titulo">Quiénes cruzan la profecía</h2>
+      </div>
+
+      <div class="personajes">
+        <article class="tarjeta-personaje">
+          <h3 class="tarjeta-personaje__nombre">El aprendiz</h3>
+          <p class="tarjeta-personaje__rol">Protagonista · personalizable</p>
+          <p class="tarjeta-personaje__descripcion">
+            El jugador elige su pelaje —blanco, gris, negro o siamés— y su nombre. Viste una
+            túnica beige y una bufanda roja. Es, sin saberlo al inicio, el cachorro que la
+            profecía señala.
+          </p>
+        </article>
+
+        <article class="tarjeta-personaje">
+          <h3 class="tarjeta-personaje__nombre">Rastrojo</h3>
+          <p class="tarjeta-personaje__rol">Guerrero exiliado</p>
+          <p class="tarjeta-personaje__descripcion">
+            Armadura oscura con detalles naranjas y una capa. Rompió con su Colonia y se alió
+            con la Manada del Colmillo, convencido de que las viejas leyes felinas ya no
+            protegen a nadie.
+          </p>
+        </article>
+
+        <article class="tarjeta-personaje">
+          <h3 class="tarjeta-personaje__nombre">Rosa</h3>
+          <p class="tarjeta-personaje__rol">Gata expulsada</p>
+          <p class="tarjeta-personaje__descripcion">
+            Desterrada injustamente de su Colonia, Rosa busca al hijo que perdió sin saber que
+            el aprendiz ya lo encontró.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== MECÁNICAS ===================== -->
+    <section id="mecanicas" class="seccion">
+      <div class="seccion__cabecera">
+        <p class="seccion__numero">Mecánicas</p>
+        <h2 class="seccion__titulo">Cómo se juega Felinaria</h2>
+      </div>
+
+      <div class="mecanicas">
+        <div class="dato-mecanica">
+          <p class="dato-mecanica__etiqueta">Género</p>
+          <p class="dato-mecanica__valor">RPG táctico narrativo</p>
+        </div>
+        <div class="dato-mecanica">
+          <p class="dato-mecanica__etiqueta">Combate</p>
+          <p class="dato-mecanica__valor">Por turnos, en cuadrícula</p>
+        </div>
+        <div class="dato-mecanica">
+          <p class="dato-mecanica__etiqueta">Estética</p>
+          <p class="dato-mecanica__valor">Pixelart 2D</p>
+        </div>
+        <div class="dato-mecanica">
+          <p class="dato-mecanica__etiqueta">Mundo</p>
+          <p class="dato-mecanica__valor">Colonias felinas en tensión</p>
+        </div>
+      </div>
+
+      <p class="inspiraciones">
+        Inspirado en Warrior Cats, Cattails, Cult of the Lamb y Fire Emblem, con un diseño de
+        personajes que retoma el espíritu de los Felynes de Monster Hunter.
+      </p>
+    </section>
+
+    <!-- ===================== GALERÍA ===================== -->
+    <section id="galeria" class="seccion">
+      <div class="seccion__cabecera">
+        <p class="seccion__numero">Galería</p>
+        <h2 class="seccion__titulo">Bocetos conceptuales</h2>
+        <p class="seccion__texto">
+          Primeros símbolos visuales del mundo de Felinaria, previos al arte final en pixelart.
+        </p>
+      </div>
+
+      <div class="galeria">
+        <figure>
+          <img src="images/boceto-colonia.svg" alt="Boceto conceptual de una Colonia felina">
+          <figcaption>Una Colonia felina</figcaption>
+        </figure>
+        <figure>
+          <img src="images/boceto-colmillo.svg" alt="Boceto conceptual del emblema de la Manada del Colmillo">
+          <figcaption>Manada del Colmillo</figcaption>
+        </figure>
+        <figure>
+          <img src="images/boceto-profecia.svg" alt="Boceto conceptual del símbolo de la profecía">
+          <figcaption>El presagio</figcaption>
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== PIE DE PÁGINA ===================== -->
+  <footer class="pie" id="equipo">
+    <ul class="pie__equipo">
+      <li>Bernal Arias Diana Laura</li>
+      <li>Topete Sánchez José Carlos</li>
+      <li>Ramos Díaz Aldair Alejandro</li>
+      <li>Rosales García Sherlyn Vanessa</li>
+      <li>Bernal Hernández Brandon Eduardo</li>
+      <li>Mendoza Salas Gilberto Alonso</li>
+    </ul>
+    <p>&copy; 2026 Felinaria.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

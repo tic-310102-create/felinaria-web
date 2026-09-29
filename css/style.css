@@ -1,0 +1,664 @@
+/* ============================================================
+   FELINARIA — Hoja de estilos
+   Tema: manuscrito iluminado y fortaleza medieval (sobrio)
+   Paleta: tinta / pergamino / oro / cobre / burdeos / musgo
+   Tipografías: Cinzel (títulos) + EB Garamond (texto)
+   ============================================================ */
+
+/* ---------- Variables de marca ---------- */
+:root {
+  --color-tinta: #15120D;
+  --color-tinta-suave: #1D1913;
+  --color-pergamino: #E8DCC0;
+  --color-pergamino-tenue: #C9BC9C;
+  --color-oro: #C9A24B;
+  --color-oro-claro: #EBD08B;
+  --color-oro-oscuro: #8D6A26;
+  --color-cobre: #B0662F;
+  --color-burdeos: #8A2634;
+  --color-musgo: #5C6B44;
+  --linea: rgba(232, 220, 192, 0.12);
+  --linea-oro: rgba(201, 162, 75, 0.4);
+
+  --fuente-titulos: 'Cinzel', Georgia, serif;
+  --fuente-texto: 'EB Garamond', Georgia, 'Times New Roman', serif;
+
+  --espacio-sm: 0.75rem;
+  --espacio-md: 1.5rem;
+  --espacio-lg: 3rem;
+  --espacio-xl: clamp(4rem, 9vw, 6.5rem);
+  --ancho: 1080px;
+
+  /* Grano de pergamino: ruido SVG muy tenue, sin imágenes externas */
+  --grano: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.07'/%3E%3C/svg%3E");
+}
+
+/* ---------- Reinicio básico ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+  scrollbar-color: var(--color-oro-oscuro) var(--color-tinta);
+}
+
+body {
+  background: var(--grano), var(--color-tinta);
+  color: var(--color-pergamino);
+  font-family: var(--fuente-texto);
+  font-size: 1.1875rem;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+[id] {
+  scroll-margin-top: 4.75rem;
+}
+
+::selection {
+  background: var(--color-burdeos);
+  color: var(--color-pergamino);
+}
+
+/* ---------- Encabezado y navegación ---------- */
+.cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-color: rgba(21, 18, 13, 0.94);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--linea-oro);
+}
+
+/* segunda línea fina: doble filete de manuscrito */
+.cabecera::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  margin-top: 3px;
+  height: 1px;
+  background: var(--linea);
+}
+
+.cabecera__interior {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem var(--espacio-md);
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+}
+
+.marca img {
+  filter: drop-shadow(0 0 8px rgba(201, 162, 75, 0.35));
+}
+
+.marca__nombre {
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.14em;
+  color: var(--color-oro);
+}
+
+.nav-principal ul {
+  list-style: none;
+  display: flex;
+  gap: clamp(1.1rem, 2.6vw, 2.2rem);
+}
+
+.nav-principal a {
+  text-decoration: none;
+  font-family: var(--fuente-titulos);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--color-pergamino-tenue);
+  padding: 0.4rem 0;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-principal a:hover,
+.nav-principal a:focus-visible {
+  color: var(--color-oro-claro);
+  border-bottom-color: var(--color-oro);
+}
+
+/* botón de menú para móvil */
+.boton-menu {
+  display: none;
+  background: none;
+  border: 1px solid var(--linea-oro);
+  color: var(--color-oro);
+  font-family: var(--fuente-titulos);
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  padding: 0.45rem 0.9rem;
+  cursor: pointer;
+}
+
+.boton-menu:hover {
+  background: rgba(201, 162, 75, 0.1);
+}
+
+/* ---------- Hero: vitral de arco con luz de antorcha ---------- */
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  text-align: center;
+  min-height: calc(100vh - 65px);
+  min-height: calc(100dvh - 65px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(3rem, 6vh, 6rem) clamp(1.5rem, 5vw, 4rem);
+}
+
+/* arco de medio punto, con doble filete; nace del borde inferior */
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  bottom: 0;
+  width: min(860px, calc(100% - 2.5rem));
+  height: min(780px, calc(100% - 1.5rem));
+  transform: translateX(-50%);
+  border: 1px solid var(--linea-oro);
+  border-bottom: 0;
+  border-radius: 999px 999px 0 0;
+  background: radial-gradient(circle at 50% 30%, rgba(201, 162, 75, 0.06) 0%, rgba(201, 162, 75, 0.02) 60%, transparent 100%);
+  box-shadow: inset 0 0 0 9px var(--color-tinta), inset 0 0 0 10px var(--linea);
+}
+
+/* resplandor cálido: el único movimiento de la página */
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -120px;
+  left: 50%;
+  width: min(850px, 90vw);
+  height: 600px;
+  transform: translateX(-50%);
+  background: radial-gradient(closest-side, rgba(176, 102, 47, 0.35), transparent);
+  pointer-events: none;
+  animation: antorcha 7s ease-in-out infinite;
+}
+
+@keyframes antorcha {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+.hero__ojo {
+  font-family: var(--fuente-titulos);
+  font-size: clamp(0.95rem, 1.3vw, 1.15rem);
+  letter-spacing: 0.16em;
+  color: var(--color-oro);
+}
+
+.hero__titulo {
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+  font-size: clamp(3.2rem, 9.5vw, 6.2rem);
+  letter-spacing: 0.11em;
+  line-height: 1.08;
+  margin: 1rem 0 1.2rem;
+  background: linear-gradient(180deg, var(--color-oro-claro) 0%, var(--color-oro) 50%, var(--color-oro-oscuro) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 4px 18px rgba(176, 102, 47, 0.4));
+}
+
+.hero__subtitulo {
+  font-size: clamp(1.2rem, 2.3vw, 1.55rem);
+  font-style: italic;
+  color: var(--color-pergamino-tenue);
+  max-width: 44ch;
+  margin: 0 auto var(--espacio-md);
+  text-wrap: balance;
+  line-height: 1.6;
+}
+
+.hero__ficha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.ficha {
+  font-family: var(--fuente-titulos);
+  font-size: clamp(0.85rem, 1.1vw, 0.95rem);
+  letter-spacing: 0.06em;
+  color: var(--color-oro-claro);
+  border: 1px solid var(--linea-oro);
+  background: rgba(201, 162, 75, 0.06);
+  padding: 0.5rem 1.15rem;
+}
+
+/* ---------- Secciones generales ---------- */
+.seccion {
+  padding: var(--espacio-xl) max(var(--espacio-md), calc((100% - var(--ancho)) / 2));
+  border-top: 1px solid var(--linea);
+}
+
+/* bandas alternas para separar bloques sin cajas extra */
+.seccion:nth-of-type(even) {
+  background: rgba(38, 32, 22, 0.5);
+}
+
+.seccion__cabecera {
+  max-width: 40rem;
+  margin: 0 auto var(--espacio-lg);
+  text-align: center;
+}
+
+.seccion__numero {
+  font-family: var(--fuente-titulos);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  color: var(--color-oro);
+}
+
+.seccion__titulo {
+  font-family: var(--fuente-titulos);
+  font-weight: 600;
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  margin-top: 0.4rem;
+  text-wrap: balance;
+}
+
+.seccion__texto {
+  color: var(--color-pergamino-tenue);
+  font-size: 1.1rem;
+  margin-top: 0.8rem;
+}
+
+/* divisor: filete – rombo – filete */
+.seccion__cabecera::after {
+  content: "◆";
+  display: block;
+  width: min(15rem, 70%);
+  margin: 1.5rem auto 0;
+  font-size: 0.7rem;
+  line-height: 1;
+  color: var(--color-oro);
+  background:
+    linear-gradient(to right, transparent, var(--color-oro-oscuro)) 0 50% / calc(50% - 1.2rem) 1px no-repeat,
+    linear-gradient(to left, transparent, var(--color-oro-oscuro)) 100% 50% / calc(50% - 1.2rem) 1px no-repeat;
+}
+
+/* ---------- Historia ---------- */
+.historia__cuerpo {
+  max-width: 38rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.4rem;
+}
+
+.historia__cuerpo p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* capitular, como en un manuscrito */
+.historia__cuerpo > p:first-child::first-letter {
+  float: left;
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+  font-size: 4.1em;
+  line-height: 0.8;
+  padding: 0.06em 0.1em 0 0;
+  color: var(--color-oro);
+}
+
+/* el objetivo se lee como un decreto */
+.historia__cuerpo .historia__objetivo {
+  margin-top: 0.8rem;
+  padding: 1.5rem 1.7rem;
+  text-align: left;
+  background: rgba(138, 38, 52, 0.1);
+  border: 1px solid var(--linea-oro);
+  border-left: 3px solid var(--color-burdeos);
+  outline: 1px solid var(--linea);
+  outline-offset: -8px;
+}
+
+.historia__objetivo strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-family: var(--fuente-titulos);
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  color: var(--color-oro-claro);
+}
+
+/* ---------- Personajes: cada uno con su color heráldico ---------- */
+.personajes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--espacio-md);
+}
+
+.tarjeta-personaje {
+  --acento: var(--color-oro-oscuro);
+  --acento-claro: var(--color-oro-claro);
+  background: var(--color-tinta-suave);
+  border: 1px solid var(--linea-oro);
+  border-top: 4px solid var(--acento);
+  padding: 1.8rem 1.6rem 1.7rem;
+  transition: border-color 0.25s ease;
+}
+
+.tarjeta-personaje:hover {
+  border-color: var(--color-oro);
+  border-top-color: var(--acento);
+}
+
+.tarjeta-personaje:nth-child(1) { --acento: var(--color-burdeos); --acento-claro: #E08A97; }
+.tarjeta-personaje:nth-child(2) { --acento: var(--color-cobre); --acento-claro: #E6A26B; }
+.tarjeta-personaje:nth-child(3) { --acento: var(--color-musgo); --acento-claro: #B1C78C; }
+
+.tarjeta-personaje__nombre {
+  font-family: var(--fuente-titulos);
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: var(--color-pergamino);
+}
+
+.tarjeta-personaje__rol {
+  font-family: var(--fuente-titulos);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  color: var(--acento-claro);
+  margin: 0.4rem 0 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--linea);
+}
+
+.tarjeta-personaje__descripcion {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--color-pergamino-tenue);
+}
+
+/* ---------- Mecánicas ---------- */
+.mecanicas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--espacio-md);
+  margin-bottom: var(--espacio-lg);
+}
+
+.dato-mecanica {
+  padding: 1.6rem 1.2rem;
+  text-align: center;
+  background: rgba(21, 18, 13, 0.6);
+  border: 1px solid var(--linea-oro);
+}
+
+.dato-mecanica__etiqueta {
+  font-family: var(--fuente-titulos);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  color: var(--color-oro);
+}
+
+.dato-mecanica__valor {
+  font-size: 1.35rem;
+  line-height: 1.35;
+  margin-top: 0.4rem;
+}
+
+.inspiraciones {
+  max-width: 38rem;
+  margin: 0 auto;
+  padding-top: 1.6rem;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--color-pergamino-tenue);
+  border-top: 1px solid var(--linea);
+}
+
+/* ---------- Galería ---------- */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--espacio-md);
+}
+
+.galeria figure {
+  background: var(--color-tinta-suave);
+  border: 1px solid var(--linea-oro);
+  padding: 0.6rem;
+}
+
+.galeria img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--linea);
+}
+
+.galeria figcaption {
+  padding: 0.8rem 0.4rem 0.2rem;
+  text-align: center;
+  font-family: var(--fuente-titulos);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  color: var(--color-oro-claro);
+}
+
+/* ---------- Pie de página ---------- */
+.pie {
+  position: relative;
+  padding: var(--espacio-lg) var(--espacio-md);
+  text-align: center;
+  color: var(--color-pergamino-tenue);
+  font-size: 1.05rem;
+  background: #100D09;
+  border-top: 1px solid var(--linea-oro);
+}
+
+.pie::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 3px;
+  height: 1px;
+  background: var(--linea);
+}
+
+.pie__institucion {
+  font-family: var(--fuente-titulos);
+  font-weight: 600;
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  color: var(--color-oro);
+  margin-bottom: 0.4rem;
+}
+
+.pie__equipo {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 0.3rem 1.5rem;
+  max-width: 780px;
+  margin: 1.2rem auto;
+  padding: 1.2rem 0;
+  border-block: 1px solid var(--linea);
+}
+
+.pie__equipo li::before {
+  content: "";
+  display: inline-block;
+  width: 0.38em;
+  height: 0.38em;
+  margin-right: 0.7em;
+  background: var(--color-oro-oscuro);
+  transform: rotate(45deg);
+  vertical-align: 0.12em;
+}
+
+.pie > p:last-child {
+  font-size: 0.95rem;
+}
+
+/* ---------- Accesibilidad: foco visible ---------- */
+:focus-visible {
+  outline: 2px solid var(--color-oro);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 720px) {
+  .cabecera__interior {
+    padding: 0.6rem var(--espacio-md);
+  }
+
+  .boton-menu {
+    display: inline-block;
+  }
+
+  /* el menú se despliega sobre el contenido, sin empujar la página */
+  .nav-principal {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 0.4rem var(--espacio-md) 1rem;
+    background: rgba(21, 18, 13, 0.98);
+    border-bottom: 1px solid var(--linea-oro);
+  }
+
+  .nav-principal.abierto {
+    display: block;
+  }
+
+  .nav-principal ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav-principal a {
+    display: block;
+    padding: 0.85rem 0;
+    border-bottom-color: var(--linea);
+  }
+
+  .historia__cuerpo p {
+    text-align: left;
+  }
+}
+
+/* ---------- Historia completa (leer más) ---------- */
+.historia__boton {
+  justify-self: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 0.4rem;
+  background: none;
+  border: 1px solid var(--linea-oro);
+  color: var(--color-oro-claro);
+  font-family: var(--fuente-titulos);
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  padding: 0.7rem 1.3rem;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.historia__boton:hover {
+  background: rgba(201, 162, 75, 0.1);
+  border-color: var(--color-oro);
+}
+
+/* flecha que gira al abrir */
+.historia__boton::after {
+  content: "";
+  width: 0.45rem;
+  height: 0.45rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform 0.2s ease;
+}
+
+.historia__boton[aria-expanded="true"]::after {
+  transform: rotate(-135deg) translate(-2px, -2px);
+}
+
+.historia__completa {
+  display: grid;
+  gap: 1.4rem;
+  margin-top: 0.4rem;
+  padding-top: 1.8rem;
+  border-top: 1px solid var(--linea);
+}
+
+.historia__completa[hidden] {
+  display: none;
+}
+
+.historia__profecia {
+  margin: 0.4rem 0;
+  padding: 0.4rem 0 0.4rem 1.4rem;
+  border-left: 2px solid var(--color-oro);
+  font-style: italic;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: var(--color-oro-claro);
+}
