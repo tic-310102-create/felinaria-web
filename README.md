@@ -1,31 +1,41 @@
 # Felinaria · El último presagio
 
-Página web oficial de presentación para **Felinaria: El último presagio**, un RPG táctico narrativo en 2D pixelart sobre colonias felinas, una profecía olvidada y una alianza prohibida.
+Sitio de presentación de **Felinaria**, migrado a React + Vite sin cambiar el diseño original. Toda la interfaz y sus interacciones viven en `src/App.jsx`; `css/style.css` conserva los estilos originales.
 
-## ⚔️ Características del Proyecto
-- **Diseño visual temático**: Estética inspirada en manuscritos iluminados y fortalezas medievales con paleta de tinta, pergamino y oro.
-- **Sección Hero interactiva**: Efectos de antorcha con resplandor dinámico e integración responsive.
-- **Secciones incluidas**:
-  - **Historia**: Trasfondo de la profecía y la guerra de manadas.
-  - **Personajes**: Perfiles interactivos de los protagonistas y facciones.
-  - **Mecánicas**: Combate táctico por turnos y exploración.
-  - **Galería**: Muestras visuales y arte conceptual.
-  - **Equipo**: Créditos de desarrollo y roles.
+## Ejecutar
 
-## 🚀 Estructura de Archivos
-```text
-felinaria-web/
-├── css/
-│   └── style.css
-├── images/
-│   └── logo-felinaria.svg, etc.
-├── js/
-│   └── main.js
-├── index.html
-└── README.md
+Las dependencias y `package-lock.json` ya están preparados. En la carpeta del proyecto:
+
+```sh
+npm run dev
 ```
 
-## 🛠️ Tecnologías
-- HTML5 semántico
-- CSS3 (Variables personalizadas, animaciones, tipografías Google Fonts *Cinzel* y *EB Garamond*)
-- JavaScript Vanilla
+Abrir la dirección que muestra Vite (habitualmente `http://localhost:5173/`). Para generar y servir la versión de producción:
+
+```sh
+npm run build
+npm run preview
+```
+
+## Estructura
+
+```text
+felinaria-web/
+├── css/style.css                 # Estilos originales + aviso de desconexión
+├── images/                       # Emblema PNG, logotipo SVG y bocetos originales
+├── public/
+│   ├── icons/                    # PNG de 192 y 512 px basados en el logotipo
+│   └── manifest.webmanifest
+├── src/
+│   ├── App.jsx                   # Toda la interfaz y las interacciones
+│   └── main.jsx                  # Montaje de React y registro del worker
+├── sw.js                         # Fuente del service worker de producción
+├── vite.config.js                # Conserva los SVG y genera el precaché
+├── index.html                    # Entrada de Vite y metadatos
+├── package.json
+└── package-lock.json
+```
+
+El build produce `dist/sw.js` con las rutas reales de los archivos JS y CSS de Vite, además de los iconos, las imágenes, el HTML y el manifiesto. Tras una primera visita con conexión a la versión de producción, la aplicación puede volver a abrirse offline. `js/main.js` se conserva como referencia del sitio anterior, pero no se carga: las interacciones se implementaron con React.
+
+Para la entrega PWA, consulta [DOCUMENTACION_PWA_FELINARIA.md](DOCUMENTACION_PWA_FELINARIA.md) y las capturas e instrucciones en [evidencias-pwa/](evidencias-pwa/README.md).
