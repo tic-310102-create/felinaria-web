@@ -1,6 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.jsx';
+import { languages } from './i18n/catalog.js';
 import '../css/style.css';
 
 createRoot(document.getElementById('root')).render(
@@ -34,7 +35,8 @@ if (import.meta.env.PROD && 'serviceWorker' in navigator) {
         if (document.visibilityState === 'visible' && navigator.onLine) update();
       });
     } catch (error) {
-      console.error('No se pudo registrar la aplicación sin conexión:', error);
+      const language = document.documentElement.lang === 'en' ? 'en' : 'es';
+      console.error(languages[language].status.workerError, error);
     }
   }, { once: true });
 }

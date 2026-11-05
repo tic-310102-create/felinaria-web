@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "title": "Felinaria · The Last Omen",
+    "description": "Felinaria: a narrative adventure with RPG elements, exploration, moral choices and action combat in a world of feline colonies."
+  },
+  "language": {"label": "Website language", "es": "Switch to Spanish", "en": "Switch to English"},
+  "nav": {"home": "Home", "story": "Story", "characters": "Characters", "mechanics": "Mechanics", "controls": "Controls", "gallery": "Gallery", "downloads": "Downloads", "team": "Team", "label": "Main navigation", "menu": "Menu", "open": "Open navigation menu", "close": "Close navigation menu"},
+  "common": {"close": "Close", "previous": "Previous image", "next": "Next image", "enlarge": "Enlarge image: {title}", "imageOf": "Image {index} of {count}", "selectImage": "View image {index} of {count}", "imageAlt": "{title}, image {index} of {count}"},
+  "hero": {
+    "eyebrow": "Narrative adventure · Action RPG · 2D pixel art",
+    "subtitle": "A feline apprentice, a forgotten prophecy, and two rival communities on the brink of a war neither ever wanted.",
+    "rating": "Rated E10+", "genre": "Narrative adventure · Light RPG", "combat": "Action combat · Free movement"
+  },
+  "story": {
+    "label": "Story", "title": "An alliance no one expected",
+    "intro": [
+      "In the feline Colonies, being different can cost you your home. Rosa was driven out of hers for no reason beyond the others' distrust. Rastrojo, a warrior tired of his own Colony's laws, turned his back on it to join the Fang Pack: the wild dogs that had been every cat's enemy for generations.",
+      "Amid this conflict, a young apprentice finds a newborn white kitten in an abandoned bag: the son Rosa lost. Unbeknownst to him, the apprentice is the very kit an ancient prophecy names as the one who will decide the Colonies' fate."
+    ],
+    "objectiveLabel": "Your goal:",
+    "objective": "guide this apprentice—whose name and coat you can choose—through exploration, action combat and story choices that determine whether the Colonies remain divided or find a way to live alongside the Fang Pack.",
+    "show": "Read the full story", "hide": "Hide the full story",
+    "passages": {
+      "origin": "Long ago, when the world was young and the forests had no names, the great cats roamed the land. Strong. Fierce. Masters of the earth. Yet neither their strength nor their fangs could protect them from the dangers lurking beyond their dens. One by one they fell, until the gods took pity and gave them new bodies. Small. Swift. Made to hide among the roots and survive deep within the forest.",
+      "cats": "And so cats came into being.",
+      "colonies": "Afraid of being hunted to extinction once more, the cats formed Colonies: communities where every cat had a place, a task and a purpose. As generations passed, the Colonies grew and spread. Each developed its own customs, beliefs and ways of surviving. Some settled beside rivers whose waters never stood still. Others lived among ancient trees with branches that touched the sky. A few chose remote places where few predators dared to venture.",
+      "peace": "For many generations, the Colonies lived in peace. They traded prey, shared news of dangers in the forest and helped one another when a territory was threatened. They were not friends. But neither were they enemies.",
+      "rules": "Keeping the peace was never easy, however. Disputes over territory, food and their leaders' decisions sparked conflicts. Some Colonies even fought one another. In time, the cats established rules to stop those disputes from destroying them. Hierarchy and tradition became central to Colony life. To some cats, those rules were the very reason they had survived for so many generations.",
+      "dissent": "But not every cat saw things the same way.",
+      "rastrojo": "In more recent times, a cat named Rastrojo began to question the Colony system. He believed hierarchies existed only to give a few cats power over the rest. To him, territories and rules did not protect cats: they kept them apart. Over time, his rejection of the Colonies hardened into resentment.",
+      "rebellion": "Rastrojo gathered cats who shared his beliefs and began attacking territorial boundaries. He was not trying to conquer a Colony or become its leader. His aim was different: to tear down the rules that maintained order and prove that cats could survive without leaders, territories or hierarchies.",
+      "exile": "His attacks sparked conflicts and put many cats in danger. The Colonies decided to stop him and banish him from their territories.",
+      "disappearance": "Rastrojo vanished into the forest.",
+      "silence": "For a long time, no one heard from him again.",
+      "allies": "Until he found unexpected allies.",
+      "fangPack": "In the farthest reaches of the territory lived a community of wild dogs known as the Fang Pack. They did not share the cats' customs, and for generations the two had competed for the same lands and resources. Rastrojo approached them with a bargain. The dogs would help him weaken the Colonies, and in return they would gain access to territories that had always belonged to the cats.",
+      "secretAlliance": "Their alliance grew in secret.",
+      "rosa": "But Rastrojo was not the only cat who held a grudge against the Colonies.",
+      "accusation": "Long before the attacks began, a cat named Rosa had belonged to the protagonist's Colony. Clever and capable, she was accused of something she had not done. Although she tried to prove her innocence, the Colony's leaders chose to exile her.",
+      "loss": "For Rosa, it meant losing everything. Her home, her standing, and the cats she had once called family. She lived alone in the forest for a long time. Her resentment toward the Colony grew until it became part of her life.",
+      "meeting": "That was when Rastrojo found her.",
+      "persuasion": "He knew her story and understood that she had been banished unjustly. He told her that her treatment proved the Colonies were rotten to their roots, and that no cat should have to live by their rules again. Rosa did not entirely trust him, but she shared his resentment.",
+      "pact": "So began an alliance that would change the Colonies' fate.",
+      "spying": "While Rastrojo gathered forces alongside the Fang Pack, Rosa collected information about the Colony that had once been her home.",
+      "hiddenPlan": "But there was something Rastrojo had not told her.",
+      "beyondProof": "He did not merely want to prove the Colonies wrong.",
+      "destruction": "He wanted to destroy them.",
+      "division": "His true aim was to stir up enough conflict that the cats would begin to distrust one another. If the Colonies stopped helping each other, defeating them one by one would be far easier.",
+      "doubts": "Rosa began to realize that his plan went far beyond anything she had imagined. By then, however, it was too late to walk away from the alliance without consequences.",
+      "birth": "While these events unfolded far from the other cats' eyes, a kit was born in the protagonist's Colony who would come to be seen as special. From his earliest days, some members of the Colony connected him to an ancient prophecy.",
+      "prophecyIntro": "The prophecy said:",
+      "prophecy": "“When the one who will change the Colonies' fate arrives, the cats must decide what they are willing to sacrifice to protect what they call their own.”",
+      "interpretations": "No one knew exactly what it meant. Some thought it foretold a great warrior. Others believed it spoke of a future leader who could unite the Colonies.",
+      "training": "The kit grew up hearing those stories. In time, he began to believe his life had a special purpose. When he finally became an apprentice, the Lord of his Colony took charge of his training. There he would learn to fight, travel through the territory and protect other cats.",
+      "approach": "Without his knowing, as he prepared to become a warrior, Rastrojo and the Fang Pack were drawing ever closer to the territory.",
+      "firstSign": "The first sign of the conflict would come during a mission.",
+      "mission": "The protagonist would be sent with other cats to survey an area near the Colony's borders. Along the way, they would find signs that something was disturbing the forest's balance.",
+      "tracks": "Dog tracks. Marked territories. And traces of cats who should no longer have been there.",
+      "surprise": "Yet among all those signs, the protagonist would find something he had never expected.",
+      "meow": "A faint mew coming from the bushes.",
+      "kitten": "Closer inspection would reveal a kitten trapped inside an abandoned bag.",
+      "whiteFur": "He was completely white.",
+      "identity": "The protagonist would not know who he was, where he had come from or why he was alone. Nor would he know that this little one was part of a story the Colony had tried to forget. For the kitten was Rosa's son.",
+      "connection": "His very existence would be the spark that brought together Rosa's past, Rastrojo's plans and the protagonist's destiny.",
+      "choice": "From that moment on, the protagonist must decide what to do with the kitten as conflict between the Colonies intensifies.",
+      "danger": "What began as a simple mission will reveal that the greatest threat to the Colonies lies not only beyond their borders.",
+      "wounds": "It also lies in the wounds they left behind."
+    }
+  },
+  "characters": {
+    "label": "Characters", "title": "Those bound by the prophecy", "viewGallery": "View all {count} images of the apprentice", "galleryHint": "{count} images · click to view", "galleryLabel": "The apprentice gallery",
+    "apprentice": {"name": "The apprentice", "role": "Protagonist · customizable", "description": "Choose the apprentice's name and coat: white, gray, black or Siamese. He wears a beige tunic and a red scarf. Though he does not know it at first, he is the kit named in the prophecy.", "alt": "The feline apprentice"},
+    "rastrojo": {"name": "Rastrojo", "role": "Exiled warrior", "description": "Dark armor with orange details and a cloak. He broke with his Colony and joined the Fang Pack, convinced that the old feline laws no longer protect anyone.", "alt": "Rastrojo, the exiled warrior"},
+    "rosa": {"name": "Rosa", "role": "Banished cat", "description": "Unjustly exiled from her Colony, Rosa searches for her lost son, unaware that the apprentice has already found him.", "alt": "Rosa, the banished cat"},
+    "mentor": {"name": "Lord of the Ravens", "role": "Mentor", "description": "The mentor who guides the protagonist through his early training. He takes part in the ceremony, gives instructions and accompanies the apprentice during practice, teaching the player the basics of movement, attacking and using inventory resources.", "alt": "The Lord of the Ravens, the apprentice's mentor"},
+    "pack": {"name": "The Fang Pack", "role": "Enemies", "description": "The Fang Pack is part of the game's conflicts and encounters. Enemies are part of the combat mechanics and can take damage until they are defeated.", "alt": "Wild dogs of the Fang Pack"}
+  },
+  "mechanics": {
+    "label": "Game mechanics", "title": "Your adventure, your choices", "subtitle": "Discover how to explore Felinaria, meet its inhabitants, fight and shape your own story.",
+    "screenshotNote": "Original screenshots show the game's Spanish interface.", "enlargeHint": "Select the screenshot to enlarge it", "captureLabel": "Gameplay screenshot: {title}",
+    "exploration": {"title": "Exploration and interaction", "description": "Travel through Felinaria's colonies and varied landscapes, discover new places and interact with their inhabitants. Encounters and story objectives lead the protagonist through an adventure filled with secrets and challenges.", "alt": "The apprentice investigates tracks beside a river during an exploration mission"},
+    "dialogue": {"title": "Dialogue and characters", "description": "Meet the inhabitants of Felinaria and uncover their stories through conversations woven into the adventure. Some encounters offer different responses, letting you take part in key moments of the narrative.", "alt": "The apprentice speaks with his mentor at the training camp"},
+    "morality": {"title": "Choices and morality", "description": "Every choice can leave a mark on the story. The protagonist's decisions are recorded and can change his morality, shaping later conversations and the consequences of certain events.", "alt": "A story decision offers three responses with different moral consequences"},
+    "combat": {"title": "Combat and survival", "description": "Face the dangers threatening the colonies with attacks, defensive movement and your combat skills. Manage your character's health, dodge enemy attacks and overcome each encounter to continue the adventure.", "alt": "The apprentice attacks an opponent in an action combat encounter"},
+    "creation": {"title": "Create your protagonist", "description": "Before your adventure begins, customize the feline apprentice at the heart of your story. Choose his name and one of four available coats: white, gray, black or Siamese. Then begin your training and discover the destiny that awaits you in Felinaria.", "alt": "Original apprentice creation screen with a name field and four coat appearances"},
+    "appearanceLabel": "Choose an appearance", "appearanceAlt": "The apprentice with a {coat} coat", "selectCoat": "Preview the {coat} coat", "demoNote": "Preview the four appearances. This selection only changes the website demo; it does not change your character in the game.",
+    "coats": {"white": "white", "gray": "gray", "black": "black", "siamese": "Siamese"},
+    "inspirations": "Inspired by Warrior Cats, Cattails, Cult of the Lamb and Fire Emblem, with character designs that draw on the spirit of Monster Hunter's Felynes."
+  },
+  "controls": {
+    "label": "Controls", "title": "Game controls", "subtitle": "Master every move and get ready to write your own story.", "keyboard": "Keyboard", "gamepad": "Controller", "or": "or", "action": "action", "actions": "actions", "capture": "Original controls screenshot: {title}", "viewer": "Enlarged image: {title}", "hint": "Select the image to enlarge it",
+    "keys": {"ShiftLeft": "Left Shift", "ShiftRight": "Right Shift", "Space": "Space"},
+    "groups": {"movement": "Movement and exploration", "combat": "Combat and survival", "interface": "Menus and interface", "interaction": "Interaction and dialogue"},
+    "items": {
+      "move": {"name": "Move", "alternative": "or arrow keys", "gamepad": "left stick or directional pad (D-Pad)."},
+      "sprint": {"name": "Run / Sprint", "gamepad": "LB / RB on Xbox; L1 / R1 on PlayStation."},
+      "attack": {"name": "Attack with a weapon", "alternative": "or left click"},
+      "heal": {"name": "Quick heal (potion)"},
+      "inventory": {"name": "Inventory", "detail": "To equip a weapon or amulet: press {E} or click the item in your inventory, as described in the documented controls."},
+      "map": {"name": "Region map", "detail": "Close with {M} or {Escape}."},
+      "lore": {"name": "Story / Lore codex", "detail": "Read the chronicles and legends you have discovered."},
+      "pause": {"name": "Pause / Options menu", "gamepad": "Start / Options."},
+      "interact": {"name": "Interact with NPCs, chests and clues"},
+      "advance": {"name": "Advance dialogue", "alternative": "or click"},
+      "answer": {"name": "Choose a moral response", "alternative": "or click the corresponding option"}
+    }
+  },
+  "gallery": {
+    "label": "Gallery", "title": "The lands of Felinaria", "subtitle": "Discover the feline colonies and the home of the Fang Pack.",
+    "sun": {"name": "Sun Colony", "description": "The protagonist's home and the place where his adventure begins. Much of the story unfolds here as the young apprentice trains and prepares to face the dangers threatening Felinaria.", "alt": "Illustration of Sun Colony, with mountain scenery and sunlit towers"},
+    "moon": {"name": "Moon Colony", "description": "The most distant and secluded of the three feline colonies. Its inhabitants are known for their wary, cautious nature. Although they trade with the other colonies, they prefer to remain independent and protect their territories.", "alt": "Illustration of Moon Colony beneath a star-filled sky"},
+    "tide": {"name": "Tide Colony", "description": "A neighbor of Sun Colony, known for its trading activities and its ties to the other feline communities. The exchange of resources and relationships between territories play an important part in everyday life.", "alt": "Illustration of Tide Colony's harbor and coastal cliffs"},
+    "fang": {"name": "Fang Pack", "description": "A community of wild dogs living on an isolated island beyond the dangerous Tempest Ocean. Its conflicts with the feline colonies pose a growing threat, while the mystery of how the dogs cross those waters remains unanswered.", "alt": "Illustration of the Fang Pack's fortress on an isolated island"}
+  },
+  "downloads": {
+    "label": "Downloads", "title": "Take Felinaria with you", "subtitle": "Explore Felinaria in your browser or install our upcoming mobile app.", "available": "Available", "development": "In development",
+    "webType": "Installable website", "webName": "Felinaria Web", "webAlt": "Felinaria Web emblem", "webDescription": "Install Felinaria on your device and explore its stories, characters and core content, even offline after the initial load.", "webCompatibility": "For compatible browsers and devices. On iPhone and iPad, use your browser's sharing options.",
+    "installed": "Felinaria is already installed in this window", "install": "Install Felinaria Web", "manual": "Install it from your browser's menu. See the guide to find the option.", "showWebTutorial": "View installation guide", "hideWebTutorial": "Hide installation guide", "webTutorialIntro": "Installation is handled by your browser; the available option may vary by device.",
+    "results": {"accepted": "Installation accepted. Look for Felinaria among your apps.", "cancelled": "Installation cancelled. You can use the installation guide whenever you like.", "error": "The installation dialog could not be opened. Follow the installation guide."},
+    "androidTutorial": ["Open Felinaria in a compatible browser.", "Open the browser menu.", "Look for ‘Install app’ or ‘Add to home screen’.", "Confirm installation or shortcut creation.", "Open Felinaria from its icon."],
+    "pcLabel": "Windows / PC", "pcTutorial": ["Open Felinaria in Chrome, Edge or Brave.", "Use the installation option in the browser or its menu.", "Confirm the installation.", "Open Felinaria from its installed shortcut."],
+    "iosLabel": "iPhone / iPad", "iosTutorial": ["Open Felinaria in a compatible browser.", "Open the sharing menu.", "Select ‘Add to Home Screen’ when available.", "Confirm and open Felinaria from its icon."],
+    "apkType": "Android app", "apkName": "Felinaria for Android", "apkAlt": "Android device", "apkDescription": "We are developing a version for Android devices. You will soon be able to download and install it directly on your phone.", "apkCompatibility": "A standalone Android app. The APK does not run directly on iPhone or iPad.", "downloadApk": "Download APK", "apkOffline": "Download unavailable offline", "apkSoon": "Download APK · Coming soon", "showApkTutorial": "How to install Felinaria on Android", "hideApkTutorial": "Hide Android installation guide",
+    "apkTutorial": ["Once it is released, select ‘Download APK’.", "Wait for the download to finish.", "Open the file from Downloads or your file manager.", "If Android asks you to allow installations from that source app, check where the file came from and grant permission only if you trust it.", "Confirm the installation by following the system prompts.", "Open Felinaria from your app menu."],
+    "warning": "Only install APK files from trusted sources. Do not disable your device's general security protections."
+  },
+  "team": {"title": "Development team", "copyright": "© 2026 Felinaria."},
+  "status": {"offline": "Offline · content available without Internet", "workerError": "The offline application could not be registered:"}
+}

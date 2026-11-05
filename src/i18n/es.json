@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "title": "Felinaria · El último presagio",
+    "description": "Felinaria: aventura narrativa con elementos RPG, exploración, decisiones morales y combate de acción en un mundo de colonias felinas."
+  },
+  "language": {"label": "Idioma del sitio", "es": "Cambiar a español", "en": "Cambiar a inglés"},
+  "nav": {"home": "Inicio", "story": "Historia", "characters": "Personajes", "mechanics": "Mecánicas", "controls": "Controles", "gallery": "Galería", "downloads": "Descargables", "team": "Equipo", "label": "Navegación principal", "menu": "Menú", "open": "Abrir menú de navegación", "close": "Cerrar menú de navegación"},
+  "common": {"close": "Cerrar", "previous": "Imagen anterior", "next": "Imagen siguiente", "enlarge": "Ampliar imagen de {title}", "imageOf": "Imagen {index} de {count}", "selectImage": "Ver imagen {index} de {count}", "imageAlt": "{title}, imagen {index} de {count}"},
+  "hero": {
+    "eyebrow": "Aventura narrativa · RPG de acción · pixelart 2D",
+    "subtitle": "Un aprendiz felino, una profecía olvidada y dos manadas al borde de una guerra que ninguna de las dos quiso empezar.",
+    "rating": "Clasificación E10+", "genre": "Aventura narrativa · RPG ligero", "combat": "Combate de acción · movimiento libre"
+  },
+  "story": {
+    "label": "Historia", "title": "Una alianza que nadie esperaba",
+    "intro": [
+      "En las Colonias felinas, ser distinto puede costarte el hogar. Rosa fue expulsada de la suya sin más razón que la desconfianza de los demás. Rastrojo, un guerrero harto de las leyes de su propia Colonia, rompió con ella para aliarse con la Manada del Colmillo: los perros salvajes que durante generaciones fueron el enemigo de todo gato.",
+      "En medio de ese conflicto, un joven aprendiz encuentra en una bolsa abandonada a un gatito blanco recién nacido: el hijo que Rosa perdió. Sin saberlo todavía, ese aprendiz es el cachorro que una vieja profecía señala como quien decidirá el destino de las Colonias."
+    ],
+    "objectiveLabel": "Objetivo del jugador:",
+    "objective": "guiar a este aprendiz —personalizable en pelaje y nombre— a través de la exploración, el combate de acción y las decisiones narrativas que determinan si las Colonias sobreviven divididas o encuentran una forma de convivir con la Manada del Colmillo.",
+    "show": "Leer la historia completa", "hide": "Ocultar historia completa",
+    "passages": {
+      "origin": "En épocas antiguas, cuando el mundo era joven y los bosques no tenían nombre, existían los grandes felinos. Fuertes. Feroces. Dueños de la tierra. Pero ni su fuerza ni sus colmillos bastaron para protegerlos de los peligros que acechaban fuera de sus guaridas. Uno a uno fueron cayendo, hasta que los dioses, apiadados, decidieron darles un nuevo cuerpo. Pequeño. Veloz. Hecho para esconderse entre las raíces y sobrevivir en las profundidades del bosque.",
+      "cats": "Así nacieron los gatos.",
+      "colonies": "Los gatos, temerosos de volver a ser cazados hasta la extinción, formaron Colonias: grupos donde cada gato tenía un lugar, una tarea y un propósito. Con el paso de las generaciones, las Colonias crecieron y se expandieron. Cada una desarrolló sus propias costumbres, sus propias creencias, su propia forma de sobrevivir. Algunas se establecieron junto a los ríos, donde el agua nunca se detenía. Otras entre los árboles más antiguos, cuyas ramas tocaban el cielo. Y unas pocas en las zonas más alejadas, donde pocos depredadores se atrevían a llegar.",
+      "peace": "Durante muchas generaciones, las Colonias vivieron en paz. Intercambiaban presas, compartían información sobre los peligros del bosque y se ayudaban cuando algún territorio era amenazado. No eran amigas. Pero tampoco enemigas.",
+      "rules": "Sin embargo, mantener la paz nunca fue sencillo. Las disputas por los territorios, el alimento y las decisiones de los líderes provocaron conflictos. Algunas Colonias llegaron incluso a enfrentarse entre sí. Con el tiempo, los gatos crearon reglas para evitar que aquellas disputas terminaran destruyéndolos. Las jerarquías y las tradiciones se volvieron una parte importante de la vida de las Colonias. Para algunos gatos, aquellas reglas representaban la razón por la que habían conseguido sobrevivir durante tantas generaciones.",
+      "dissent": "Pero no todos pensaban de la misma manera.",
+      "rastrojo": "En una época más reciente, un gato llamado Rastrojo comenzó a cuestionar el sistema de las Colonias. Rastrojo creía que las jerarquías solamente servían para que unos pocos gatos tuvieran poder sobre los demás. Para él, los territorios y las reglas no protegían a los gatos: los mantenían separados. Con el tiempo, su rechazo hacia las Colonias se convirtió en resentimiento.",
+      "rebellion": "Rastrojo comenzó a reunir gatos que compartían sus ideas y atacó algunos de los límites territoriales. No buscaba conquistar una Colonia ni convertirse en su líder. Su objetivo era diferente: quería destruir las reglas que mantenían el orden entre ellas y demostrar que los gatos podían sobrevivir sin líderes, territorios ni jerarquías.",
+      "exile": "Sin embargo, los ataques de Rastrojo provocaron conflictos y terminaron poniendo en peligro a muchos gatos. Las Colonias decidieron detenerlo y expulsarlo de sus territorios.",
+      "disappearance": "Rastrojo desapareció en el bosque.",
+      "silence": "Durante mucho tiempo nadie volvió a saber de él.",
+      "allies": "Hasta que encontró aliados inesperados.",
+      "fangPack": "En las zonas más alejadas del territorio vivía una comunidad de perros salvajes conocida como la Manada del Colmillo. Los perros no compartían las costumbres de los gatos y durante generaciones habían competido por los mismos territorios y recursos. Rastrojo se acercó a ellos y les ofreció un trato. Los perros lo ayudarían a debilitar a las Colonias y, a cambio, tendrían acceso a territorios que hasta entonces habían pertenecido a los gatos.",
+      "secretAlliance": "La alianza comenzó a crecer en secreto.",
+      "rosa": "Pero Rastrojo no fue el único gato que guardaba rencor hacia las Colonias.",
+      "accusation": "Mucho antes de que comenzaran los ataques, una gata llamada Rosa había pertenecido a la Colonia del protagonista. Rosa era una gata inteligente y habilidosa, pero terminó siendo acusada de un acto que no había cometido. A pesar de intentar demostrar su inocencia, los líderes de la Colonia decidieron expulsarla.",
+      "loss": "Para Rosa, aquello significó perderlo todo. Su hogar, su posición y a los gatos que alguna vez consideró su familia. Durante mucho tiempo vivió sola en el bosque. El resentimiento que sentía hacia la Colonia fue creciendo hasta convertirse en una parte de su vida.",
+      "meeting": "Fue entonces cuando Rastrojo la encontró.",
+      "persuasion": "Él conocía su historia y sabía que había sido expulsada injustamente. Le contó que su situación era una prueba de que las Colonias estaban podridas desde sus raíces y que ningún gato debía volver a vivir bajo sus reglas. Rosa no confiaba completamente en él, pero compartía su resentimiento.",
+      "pact": "Así comenzó una alianza que cambiaría el destino de las Colonias.",
+      "spying": "Mientras Rastrojo reunía fuerzas junto a la Manada del Colmillo, Rosa se encargaba de obtener información sobre la Colonia que alguna vez había sido su hogar.",
+      "hiddenPlan": "Pero había algo que Rastrojo no le había contado.",
+      "beyondProof": "Él no quería simplemente demostrar que las Colonias estaban equivocadas.",
+      "destruction": "Quería destruirlas.",
+      "division": "Su verdadero objetivo era provocar suficientes conflictos para que los gatos comenzaran a desconfiar unos de otros. Si las Colonias dejaban de ayudarse, sería mucho más sencillo derrotarlas una por una.",
+      "doubts": "Rosa comenzó a darse cuenta de que el plan iba mucho más lejos de lo que había imaginado. Sin embargo, para entonces ya era demasiado tarde para abandonar la alianza sin consecuencias.",
+      "birth": "Mientras estos acontecimientos ocurrían lejos de los ojos de los demás gatos, dentro de la Colonia del protagonista nacía un cachorro que sería considerado especial. Desde pequeño, algunos miembros de la Colonia comenzaron a relacionarlo con una antigua profecía.",
+      "prophecyIntro": "La profecía decía:",
+      "prophecy": "“Cuando llegue aquel que cambie el destino de las Colonias, los gatos deberán decidir qué están dispuestos a sacrificar para proteger aquello que consideran suyo.”",
+      "interpretations": "Nadie sabía exactamente qué significaba. Algunos pensaban que hablaba de un gran guerrero. Otros creían que se trataba de un futuro líder capaz de unir a las Colonias.",
+      "training": "El cachorro creció escuchando aquellas historias. Con el tiempo, comenzó a creer que su vida tenía un propósito especial. Cuando finalmente llegó el momento de convertirse en escudero, fue puesto bajo el entrenamiento del Señor de su Colonia. Allí aprendería a combatir, desplazarse por el territorio y proteger a otros gatos.",
+      "approach": "Sin saberlo, mientras él se preparaba para convertirse en guerrero, Rastrojo y la Manada del Colmillo comenzaban a acercarse cada vez más al territorio.",
+      "firstSign": "La primera señal del conflicto llegaría durante una misión.",
+      "mission": "El protagonista sería enviado junto a otros gatos para revisar una zona cercana a los límites de la Colonia. Durante el recorrido encontrarían señales de que algo estaba alterando el equilibrio del bosque.",
+      "tracks": "Huellas de perros. Territorios marcados. Y rastros que pertenecían a gatos que ya no deberían encontrarse allí.",
+      "surprise": "Sin embargo, entre todo aquello habría algo que el protagonista no esperaba encontrar.",
+      "meow": "Un pequeño maullido proveniente de unos arbustos.",
+      "kitten": "Al acercarse descubriría a un gatito atrapado dentro de una bolsa abandonada.",
+      "whiteFur": "Era completamente blanco.",
+      "identity": "El protagonista no sabría quién era, de dónde había venido ni por qué estaba solo. Tampoco sabría que aquel pequeño estaba relacionado con una historia que la Colonia había intentado olvidar. Porque el gatito era hijo de Rosa.",
+      "connection": "Y su existencia sería el detonante que terminaría conectando el pasado de Rosa, los planes de Rastrojo y el destino del protagonista.",
+      "choice": "A partir de ese momento, el protagonista tendrá que decidir qué hacer con el gatito mientras los conflictos entre las Colonias aumentan.",
+      "danger": "Lo que comenzó como una simple misión terminará revelando que la mayor amenaza para las Colonias no se encuentra únicamente fuera de sus territorios.",
+      "wounds": "También se encuentra en las heridas que dejaron atrás."
+    }
+  },
+  "characters": {
+    "label": "Personajes", "title": "Quiénes cruzan la profecía", "viewGallery": "Ver las {count} imágenes de El aprendiz", "galleryHint": "{count} imágenes · clic para ver", "galleryLabel": "Galería de El aprendiz",
+    "apprentice": {"name": "El aprendiz", "role": "Protagonista · personalizable", "description": "El jugador elige su pelaje —blanco, gris, negro o siamés— y su nombre. Viste una túnica beige y una bufanda roja. Es, sin saberlo al inicio, el cachorro que la profecía señala.", "alt": "El aprendiz felino"},
+    "rastrojo": {"name": "Rastrojo", "role": "Guerrero exiliado", "description": "Armadura oscura con detalles naranjas y una capa. Rompió con su Colonia y se alió con la Manada del Colmillo, convencido de que las viejas leyes felinas ya no protegen a nadie.", "alt": "Rastrojo, guerrero exiliado"},
+    "rosa": {"name": "Rosa", "role": "Gata expulsada", "description": "Desterrada injustamente de su Colonia, Rosa busca al hijo que perdió sin saber que el aprendiz ya lo encontró.", "alt": "Rosa, gata expulsada"},
+    "mentor": {"name": "Señor de los Cuervos", "role": "Maestro", "description": "Personaje encargado de guiar al protagonista durante su formación. Participa en la ceremonia, proporciona instrucciones y acompaña al protagonista durante el entrenamiento, siendo un instructor para el jugador para enseñarle las mecánicas básicas del juego como lo son aprender a moverse, atacar y usar los recursos del inventario.", "alt": "El Señor de los Cuervos, maestro del aprendiz"},
+    "pack": {"name": "La Manada del Colmillo", "role": "Enemigos", "description": "La Manada del Colmillo representa parte de los conflictos y enfrentamientos del juego. Los enemigos forman parte de las mecánicas de combate y pueden recibir daño hasta ser derrotados.", "alt": "Perros salvajes de la Manada del Colmillo"}
+  },
+  "mechanics": {
+    "label": "Mecánicas del juego", "title": "Tu aventura, tus decisiones", "subtitle": "Descubre cómo explorar Felinaria, conocer a sus habitantes, combatir y construir tu propia historia.",
+    "screenshotNote": "Las capturas originales muestran la interfaz del juego en español.", "enlargeHint": "Pulsa la captura para ampliarla", "captureLabel": "Captura del videojuego: {title}",
+    "exploration": {"title": "Exploración e interacción", "description": "Recorre las colonias y los diferentes escenarios de Felinaria, descubre nuevos lugares e interactúa con sus habitantes. A través de encuentros y objetivos narrativos, el protagonista avanzará en una aventura llena de secretos y desafíos.", "alt": "El aprendiz investiga huellas junto al río durante una misión de exploración"},
+    "dialogue": {"title": "Diálogos y personajes", "description": "Conoce a los habitantes de Felinaria y descubre sus historias mediante conversaciones que acompañan el desarrollo de la aventura. Algunos encuentros ofrecen diferentes respuestas y permiten al jugador participar en momentos importantes de la narrativa.", "alt": "El aprendiz conversa con su mentor en el campamento de entrenamiento"},
+    "morality": {"title": "Decisiones y moral", "description": "Cada decisión puede dejar una huella en la historia. Las elecciones del protagonista se registran y pueden modificar su moral, influyendo posteriormente en las conversaciones y en las consecuencias de determinados acontecimientos.", "alt": "Una decisión narrativa presenta tres respuestas con distintas consecuencias morales"},
+    "combat": {"title": "Combate y supervivencia", "description": "Enfréntate a los peligros que amenazan a las colonias utilizando ataques, movimientos defensivos y tus habilidades de combate. Administra la vida de tu personaje, esquiva los ataques enemigos y supera los enfrentamientos para continuar la aventura.", "alt": "El aprendiz ataca durante un enfrentamiento de combate de acción"},
+    "creation": {"title": "Crea tu protagonista", "description": "Antes de comenzar tu aventura, personaliza al gato aprendiz que protagonizará tu historia. Elige su nombre y selecciona una de las cuatro apariencias de pelaje disponibles: blanco, gris, negro o siamés. Después, inicia tu formación y descubre el destino que te espera en Felinaria.", "alt": "Pantalla original de creación del aprendiz con nombre y cuatro apariencias de pelaje"},
+    "appearanceLabel": "Elige una apariencia", "appearanceAlt": "El aprendiz con pelaje {coat}", "selectCoat": "Ver pelaje {coat}", "demoNote": "Vista previa de las cuatro apariencias. Esta selección solo cambia la demostración de la web; no modifica el personaje del juego.",
+    "coats": {"white": "blanco", "gray": "gris", "black": "negro", "siamese": "siamés"},
+    "inspirations": "Inspirado en Warrior Cats, Cattails, Cult of the Lamb y Fire Emblem, con un diseño de personajes que retoma el espíritu de los Felynes de Monster Hunter."
+  },
+  "controls": {
+    "label": "Controles", "title": "Controles del videojuego", "subtitle": "Domina cada movimiento y prepárate para escribir tu propia historia.", "keyboard": "Teclado", "gamepad": "Mando", "or": "o", "action": "acción", "actions": "acciones", "capture": "Captura original de controles: {title}", "viewer": "Imagen ampliada de {title}", "hint": "Pulsa la imagen para ampliarla",
+    "keys": {"ShiftLeft": "Shift izquierdo", "ShiftRight": "Shift derecho", "Space": "Espacio"},
+    "groups": {"movement": "Movimiento y Exploración", "combat": "Combate y Supervivencia", "interface": "Menús e Interfaz", "interaction": "Interacción y Diálogos"},
+    "items": {
+      "move": {"name": "Moverse", "alternative": "o flechas", "gamepad": "stick izquierdo o cruceta (D-Pad)."},
+      "sprint": {"name": "Correr / Sprint", "gamepad": "LB / RB en Xbox; L1 / R1 en PlayStation."},
+      "attack": {"name": "Atacar con arma", "alternative": "o clic izquierdo"},
+      "heal": {"name": "Curación rápida (poción)"},
+      "inventory": {"name": "Inventario", "detail": "Para equipar un arma o amuleto: {E} o clic sobre el objeto desde el inventario, conforme a los controles documentados."},
+      "map": {"name": "Mapa de la región", "detail": "Cierra con {M} o {Escape}."},
+      "lore": {"name": "Códice de Historia / Lore", "detail": "Permite consultar crónicas y leyendas descubiertas."},
+      "pause": {"name": "Menú de Pausa / Opciones", "gamepad": "Start / Options."},
+      "interact": {"name": "Interactuar con NPCs, cofres y pistas"},
+      "advance": {"name": "Avanzar diálogos", "alternative": "o clic"},
+      "answer": {"name": "Elegir respuestas morales", "alternative": "o clic sobre la opción correspondiente"}
+    }
+  },
+  "gallery": {
+    "label": "Galería", "title": "Los territorios de Felinaria", "subtitle": "Conoce las colonias felinas y el hogar de la Manada del Colmillo.",
+    "sun": {"name": "Colonia del Sol", "description": "El hogar del protagonista y el lugar donde comienza su aventura. En esta colonia transcurre gran parte de la historia, mientras el joven aprendiz recibe su entrenamiento y se prepara para afrontar los peligros que amenazan a Felinaria.", "alt": "Ilustración de la Colonia del Sol, entre montañas y torres iluminadas"},
+    "moon": {"name": "Colonia de la Luna", "description": "La más alejada y reservada de las tres colonias felinas. Sus habitantes son conocidos por su carácter desconfiado y cauteloso. Aunque mantienen relaciones comerciales con las demás colonias, prefieren conservar su independencia y proteger sus territorios.", "alt": "Ilustración de la Colonia de la Luna bajo un cielo estrellado"},
+    "tide": {"name": "Colonia del Oleaje", "description": "Una colonia vecina de la Colonia del Sol, reconocida por sus actividades comerciales y sus vínculos con las otras comunidades felinas. El intercambio de recursos y las relaciones entre territorios forman una parte importante de su vida cotidiana.", "alt": "Ilustración del puerto y los acantilados de la Colonia del Oleaje"},
+    "fang": {"name": "Manada del Colmillo", "description": "Una comunidad de perros salvajes que habita en una isla aislada, más allá del peligroso Océano Tempestuoso. Sus conflictos con las colonias felinas representan una creciente amenaza, mientras el misterio de cómo atraviesan aquellas aguas permanece sin respuesta.", "alt": "Ilustración de la fortaleza de la Manada del Colmillo en una isla aislada"}
+  },
+  "downloads": {
+    "label": "Descargables", "title": "Lleva Felinaria contigo", "subtitle": "Explora el universo de Felinaria desde tu navegador o instala nuestra futura aplicación móvil.", "available": "Disponible", "development": "En desarrollo",
+    "webType": "Web instalable", "webName": "Felinaria Web", "webAlt": "Emblema de Felinaria Web", "webDescription": "Instala Felinaria en tu dispositivo y consulta sus historias, personajes y contenido principal incluso sin conexión, después de la carga inicial.", "webCompatibility": "Para navegadores y dispositivos compatibles. En iPhone y iPad, utiliza las opciones de compartir del navegador.",
+    "installed": "Felinaria ya está instalada en esta ventana", "install": "Instalar Felinaria Web", "manual": "Instálala desde el menú de tu navegador. Consulta el tutorial para encontrar la opción.", "showWebTutorial": "Ver tutorial de instalación", "hideWebTutorial": "Ocultar tutorial de instalación", "webTutorialIntro": "La instalación se realiza desde el navegador; la opción puede variar según el dispositivo.",
+    "results": {"accepted": "Instalación aceptada. Busca Felinaria entre tus aplicaciones.", "cancelled": "Instalación cancelada. Puedes usar el tutorial de instalación cuando quieras.", "error": "No se pudo abrir el diálogo de instalación. Sigue el tutorial de instalación."},
+    "androidTutorial": ["Abre la página de Felinaria en un navegador compatible.", "Abre el menú del navegador.", "Busca «Instalar aplicación» o «Agregar a pantalla de inicio».", "Confirma la instalación o creación del acceso.", "Abre Felinaria desde su icono."],
+    "pcLabel": "Windows / PC", "pcTutorial": ["Abre Felinaria en Chrome, Edge o Brave.", "Utiliza la opción de instalación disponible en el navegador o su menú.", "Confirma la instalación.", "Abre Felinaria desde su acceso instalado."],
+    "iosLabel": "iPhone / iPad", "iosTutorial": ["Abre Felinaria en un navegador compatible.", "Abre el menú de compartir.", "Selecciona «Añadir a pantalla de inicio» cuando esté disponible.", "Confirma y abre Felinaria desde el icono."],
+    "apkType": "Aplicación Android", "apkName": "Felinaria para Android", "apkAlt": "Dispositivo Android", "apkDescription": "Estamos desarrollando una versión para dispositivos Android. Próximamente podrás descargarla e instalarla directamente en tu teléfono.", "apkCompatibility": "Aplicación independiente para Android. La APK no funciona directamente en iPhone ni iPad.", "downloadApk": "Descargar APK", "apkOffline": "Descarga no disponible sin conexión", "apkSoon": "Descargar APK · Próximamente", "showApkTutorial": "Cómo instalar Felinaria en Android", "hideApkTutorial": "Ocultar tutorial para Android",
+    "apkTutorial": ["Cuando se publique, pulsa «Descargar APK».", "Espera a que finalice la descarga.", "Abre el archivo desde Descargas o el gestor de archivos.", "Si Android solicita autorizar instalaciones desde esa aplicación de origen, revisa la procedencia del archivo y concede el permiso únicamente si confías en él.", "Confirma la instalación siguiendo los mensajes del sistema.", "Abre Felinaria desde el menú de aplicaciones."],
+    "warning": "Instala únicamente archivos APK provenientes de fuentes confiables. No desactives las protecciones generales del dispositivo."
+  },
+  "team": {"title": "Equipo de desarrollo", "copyright": "© 2026 Felinaria."},
+  "status": {"offline": "Sin conexión · contenido disponible sin Internet", "workerError": "No se pudo registrar la aplicación sin conexión:"}
+}

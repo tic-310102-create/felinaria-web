@@ -475,6 +475,7 @@ a {
 .tarjeta-personaje__galeria img {
   display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 3 / 4;
   object-fit: cover;
   object-position: top center;
@@ -712,15 +713,15 @@ a {
 }
 
 /* Conserva las torres y la estrella en las ilustraciones cuadradas originales. */
-.galeria__lugar img[src$="colonia-sol.png"] {
+.galeria__lugar img[src$="colonia-sol.webp"] {
   object-position: center top;
 }
 
-.galeria__lugar img[src$="colonia-de-la-luna.png"] {
+.galeria__lugar img[src$="colonia-de-la-luna.webp"] {
   object-position: center 25%;
 }
 
-.galeria__lugar img[src$="manada-del-colmillo.png"] {
+.galeria__lugar img[src$="manada-del-colmillo.webp"] {
   object-position: center 20%;
 }
 
@@ -819,7 +820,7 @@ a {
 }
 
 /* ---------- Responsivo ---------- */
-@media (max-width: 1140px) {
+@media (max-width: 1240px) {
   .cabecera__interior {
     padding: 0.6rem var(--espacio-md);
   }
@@ -1725,5 +1726,301 @@ a {
   .boton-menu {
     gap: 0.45rem;
     padding-inline: 0.6rem;
+  }
+}
+
+/* ---------- Idiomas: un solo sitio, con controles también dentro de los visores ---------- */
+.cabecera__interior {
+  gap: 1rem;
+}
+
+.marca {
+  flex-shrink: 0;
+}
+
+.marca img {
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.nav-principal {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-principal ul {
+  gap: clamp(0.65rem, 1.1vw, 1.05rem);
+}
+
+.selector-idioma {
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 0.15rem;
+  padding: 0.2rem;
+  border: 1px solid var(--linea-oro);
+  background: var(--color-tinta);
+}
+
+.selector-idioma button {
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding: 0.35rem;
+  border: 1px solid transparent;
+  background: none;
+  color: var(--color-pergamino-tenue);
+  font-family: var(--fuente-titulos);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.selector-idioma button:hover,
+.selector-idioma button[aria-pressed="true"] {
+  border-color: var(--linea-oro);
+  background: rgba(201, 162, 75, 0.1);
+  color: var(--color-oro-claro);
+}
+
+.dialogo__barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.dialogo__barra > button {
+  margin: 0;
+}
+
+.visor-mecanica {
+  overflow: auto;
+}
+
+/* ---------- Mecánicas: escenas del juego y un muestrario de cuatro pelajes ---------- */
+.mecanicas--visuales {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.mecanica {
+  min-width: 0;
+  border: 1px solid var(--linea-oro);
+  background: var(--color-tinta-suave);
+  transition: border-color 0.25s ease;
+}
+
+.mecanica:hover {
+  border-color: var(--color-oro);
+}
+
+.mecanica__principal {
+  min-width: 0;
+}
+
+.mecanica__captura {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid var(--linea-oro);
+  background: var(--color-tinta);
+  color: var(--color-oro-claro);
+  cursor: zoom-in;
+}
+
+.mecanica__captura img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+}
+
+.mecanica__ampliar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1rem;
+  font-family: var(--fuente-titulos);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.mecanica__texto {
+  padding: clamp(1.1rem, 2.4vw, 1.6rem);
+}
+
+.mecanica__texto h3 {
+  margin-bottom: 0.75rem;
+  color: var(--color-oro-claro);
+  font-family: var(--fuente-titulos);
+  font-size: clamp(1.2rem, 1.6vw, 1.45rem);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.mecanica__texto p {
+  color: var(--color-pergamino-tenue);
+  font-size: 1.1rem;
+  line-height: 1.65;
+}
+
+.mecanica--creacion {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+}
+
+.creacion {
+  min-width: 0;
+  padding: clamp(1rem, 2.5vw, 1.6rem);
+  border-left: 1px solid var(--linea-oro);
+}
+
+.creacion__retrato {
+  padding: 0.75rem;
+  border: 1px solid var(--linea);
+  background: var(--color-tinta);
+}
+
+.creacion__retrato img {
+  width: 100%;
+  height: clamp(18rem, 30vw, 26rem);
+  object-fit: contain;
+}
+
+.creacion__seleccion {
+  margin: 0.75rem 0;
+  color: var(--color-oro-claro);
+  font-family: var(--fuente-titulos);
+  font-size: 1rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.creacion__variantes {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.creacion__variantes button {
+  min-width: 0;
+  min-height: 2.75rem;
+  padding: 0.25rem;
+  border: 1px solid var(--linea);
+  background: var(--color-tinta);
+  color: var(--color-pergamino-tenue);
+  cursor: pointer;
+}
+
+.creacion__variantes img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+}
+
+.creacion__variantes span {
+  display: block;
+  padding-top: 0.3rem;
+  font-family: var(--fuente-texto);
+  font-size: 0.95rem;
+  text-transform: capitalize;
+}
+
+.creacion__variantes button[aria-pressed="true"],
+.creacion__variantes button:hover {
+  border-color: var(--color-oro);
+  color: var(--color-oro-claro);
+}
+
+.creacion__nota,
+.mecanicas__nota {
+  margin-top: 1rem;
+  color: var(--color-pergamino-tenue);
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.mecanicas__nota {
+  margin: -1rem auto 1.5rem;
+  max-width: 44rem;
+  text-align: center;
+}
+
+.visor-mecanica .mecanicas__nota {
+  margin: 0.75rem auto 0;
+}
+
+.galeria__lugar {
+  transition: border-color 0.25s ease;
+}
+
+.galeria__lugar:hover {
+  border-color: var(--color-oro);
+}
+
+.galeria__lugar figcaption {
+  gap: 0.6rem;
+  padding: 1rem 0.65rem 0.65rem;
+}
+
+.galeria__lugar figcaption span {
+  line-height: 1.6;
+}
+
+@media (min-width: 1441px) {
+  #mecanicas {
+    --ancho: clamp(1080px, 78vw, 1440px);
+  }
+}
+
+@media (max-width: 1240px) {
+  .nav-principal {
+    display: block;
+  }
+
+  .nav-principal ul {
+    gap: 0;
+  }
+
+  .nav-principal .selector-idioma {
+    margin-top: 0.75rem;
+  }
+
+  .boton-menu {
+    min-height: 2.75rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .mecanicas--visuales,
+  .mecanica--creacion {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .creacion {
+    border-left: 0;
+    border-top: 1px solid var(--linea-oro);
+  }
+}
+
+@media (max-height: 520px) and (min-width: 600px) and (orientation: landscape) {
+  .galeria-personajes .dialogo__barra {
+    grid-column: 2;
+    grid-row: 1;
+    margin-bottom: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mecanica,
+  .galeria__lugar {
+    transition: none;
   }
 }

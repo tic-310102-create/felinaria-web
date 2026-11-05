@@ -7,10 +7,9 @@ import { apkConfig } from './src/descargables.js';
 
 const root = fileURLToPath(new URL('.', import.meta.url));
 // Si una imagen nueva pasa a formar parte de la interfaz, añadirla a esta lista.
-const files = ['logo-felinaria.svg', 'icono_felinaria.png',
-  'colonia-sol.png', 'colonia-de-la-luna.png', 'colonia-del-oleaje.png', 'manada-del-colmillo.png',
-  'aprendiz1.png', 'aprendiz2.png', 'aprendiz3.png', 'aprendiz4.png',
-  'maestro.png', 'rastrojo.png', 'rosa.png', 'perros-salvajes.png'];
+const imageMetadata = JSON.parse(readFileSync(new URL('./src/image-metadata.json', import.meta.url), 'utf8'));
+// The header/favicon WebP is imported by Vite and already emitted once in assets/.
+const files = ['logo-felinaria.svg', ...Object.keys(imageMetadata).filter((name) => name !== 'icono_felinaria.webp')];
 const source = (path) => readFileSync(fileURLToPath(new URL(path, import.meta.url)));
 const capturasControles = ['movimiento-exploracion.jpg', 'combate-supervivencia.jpg', 'menus-interfaz.jpg', 'interaccion-dialogos.jpg'];
 const capturasDisponibles = capturasControles.filter((nombre) =>
