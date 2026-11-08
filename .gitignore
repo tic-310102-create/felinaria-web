@@ -6,3 +6,4 @@ Thumbs.db
 node_modules/
 dist/
 originales-locales/
+tools/__pycache__/

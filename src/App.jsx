@@ -1,10 +1,10 @@
-import { useEffect, useRef, useState } from 'react';
+import { Fragment, useEffect, useRef, useState } from 'react';
 import { apkConfig } from './descargables.js';
 import { useLanguage } from './i18n/useLanguage.js';
-import imageMetadata from './image-metadata.json';
 import iconoFelinaria from '../images/icono_felinaria.webp';
+import { Imagen, SelectorIdioma } from './components/SiteMedia.jsx';
+import WorldExploration from './components/WorldExploration.jsx';
 
-const imagen = (nombre) => `${import.meta.env.BASE_URL}images/${nombre}`;
 const capturasDisponibles = new Set(__CONTROLES_IMAGENES__);
 // Physical keys and bindings are independent of the interface language.
 const controles = [
@@ -34,30 +34,16 @@ const mecanicas = [
   ['exploration', 'dialogos-narrativos.webp'], ['dialogue', 'interaccion-npc.webp'],
   ['morality', 'moral.webp'], ['combat', 'combate.webp'], ['creation', 'crear-protagonista.webp'],
 ];
-const regiones = [
-  ['sun', 'colonia-sol.webp'], ['moon', 'colonia-de-la-luna.webp'],
-  ['tide', 'colonia-del-oleaje.webp'], ['fang', 'manada-del-colmillo.webp'],
-];
+// Decorative ambient plates that punctuate the chronicle without adding prose.
+const laminasCronica = {
+  rebellion: 'frontera-de-la-colonia.webp',
+  meeting: 'sendero-de-los-murmullos.webp',
+  kitten: 'paso-de-la-encrucijada.webp',
+};
 const enlaces = [
-  ['home', 'inicio'], ['story', 'historia'], ['characters', 'personajes'], ['mechanics', 'mecanicas'],
-  ['controls', 'controles'], ['gallery', 'galeria'], ['downloads', 'descargables'], ['team', 'equipo'],
+  ['home', 'inicio'], ['story', 'historia'], ['characters', 'personajes'], ['world', 'galeria'], ['niveles', 'mundo-lugares'],
+  ['mechanics', 'mecanicas'], ['rewards', 'recompensas'], ['controls', 'controles'], ['downloads', 'descargables'], ['team', 'equipo'],
 ];
-
-function Imagen({ archivo, src, loading = 'lazy', ...props }) {
-  return <img src={src ?? imagen(archivo)} {...imageMetadata[archivo]} loading={loading} decoding="async" {...props} />;
-}
-
-function SelectorIdioma({ language, changeLanguage, c }) {
-  return (
-    <div className="selector-idioma" role="group" aria-label={c.language.label}>
-      {['es', 'en'].map((code) => (
-        <button key={code} type="button" lang={code} aria-label={c.language[code]} aria-pressed={language === code} onClick={() => changeLanguage(code)}>
-          {code.toUpperCase()}
-        </button>
-      ))}
-    </div>
-  );
-}
 
 // Only documented key tokens are rendered as HTML; translations never inject HTML.
 function TextoConTeclas({ texto }) {
@@ -234,24 +220,38 @@ export default function App() {
 
       <main>
         <section id="inicio" className="hero">
-          <p className="hero__ojo">{c.hero.eyebrow}</p>
-          <h1 className="hero__titulo">Felinaria</h1>
-          <p className="hero__subtitulo">{c.hero.subtitle}</p>
-          <div className="hero__ficha">
-            <span className="ficha">{c.hero.rating}</span><span className="ficha">{c.hero.genre}</span><span className="ficha">{c.hero.combat}</span>
+          <div className="hero__ambiente" aria-hidden="true">
+            <Imagen archivo="aldea-del-sol.webp" alt="" loading="eager" fetchPriority="high" />
+          </div>
+          <div className="hero__contenido">
+            <p className="hero__ojo">{c.hero.eyebrow}</p>
+            <h1 className="hero__titulo">Felinaria</h1>
+            <p className="hero__omen">{c.hero.omen}</p>
+            <p className="hero__subtitulo">{c.hero.subtitle}</p>
+            <div className="hero__ficha">
+              <span className="ficha">{c.hero.rating}</span><span className="ficha">{c.hero.genre}</span><span className="ficha">{c.hero.combat}</span>
+            </div>
           </div>
         </section>
 
         <section id="historia" className="seccion">
           <div className="seccion__cabecera"><p className="seccion__numero">{c.story.label}</p><h2 className="seccion__titulo">{c.story.title}</h2></div>
           <div className="historia__cuerpo">
-            {c.story.intro.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
-            <p className="historia__objetivo"><strong>{c.story.objectiveLabel}</strong> {c.story.objective}</p>
+            <div className="historia__texto">
+              {c.story.intro.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+              <p className="historia__objetivo"><strong>{c.story.objectiveLabel}</strong> {c.story.objective}</p>
+            </div>
+            <figure className="historia__lamina" aria-hidden="true">
+              <Imagen archivo="colonia-sol.webp" alt="" loading="lazy" />
+            </figure>
             <button type="button" className="historia__boton" id="botonHistoria" aria-expanded={historiaAbierta} aria-controls="historiaCompleta" onClick={() => setHistoriaAbierta(!historiaAbierta)}>{historiaAbierta ? c.story.hide : c.story.show}</button>
             <div className="historia__completa" id="historiaCompleta" hidden={!historiaAbierta}>
-              {Object.entries(c.story.passages).map(([key, paragraph]) => key === 'prophecy'
-                ? <blockquote key={key} className="historia__profecia">{paragraph}</blockquote>
-                : <p key={key}>{paragraph}</p>)}
+              {Object.entries(c.story.passages).map(([key, paragraph]) => <Fragment key={key}>
+                {laminasCronica[key] && <figure className="historia__lamina historia__lamina--cronica" aria-hidden="true"><Imagen archivo={laminasCronica[key]} alt="" loading="lazy" /></figure>}
+                {key === 'prophecy'
+                  ? <blockquote className="historia__profecia">{paragraph}</blockquote>
+                  : <p>{paragraph}</p>}
+              </Fragment>)}
             </div>
           </div>
         </section>
@@ -270,6 +270,8 @@ export default function App() {
             </article>)}
           </div>
         </section>
+
+        <WorldExploration {...idiomaProps} t={t} />
 
         <section id="mecanicas" className="seccion">
           <div className="seccion__cabecera">
@@ -297,8 +299,45 @@ export default function App() {
               </div>}
             </article>)}
           </div>
-          <p className="mecanicas__nota">{c.mechanics.screenshotNote}</p>
           <p className="inspiraciones">{c.mechanics.inspirations}</p>
+        </section>
+
+        <section id="recompensas" className="seccion">
+          <div className="seccion__cabecera">
+            <p className="seccion__numero">{c.rewards.label}</p>
+            <h2 className="seccion__titulo">{c.rewards.title}</h2>
+            <p className="seccion__texto">{c.rewards.intro}</p>
+          </div>
+          <div className="recompensas">
+            <article className="recompensa recompensa--espada">
+              <figure className="recompensa__lamina"><Imagen archivo="espada-de-rosa.webp" alt={c.rewards.sword.alt} loading="lazy" /></figure>
+              <div className="recompensa__cuerpo">
+                <p className="recompensa__etiqueta">{c.rewards.sword.label}</p>
+                <h3 className="recompensa__nombre">{c.rewards.sword.name}</h3>
+                <p className="recompensa__texto">{c.rewards.sword.description}</p>
+                <p className="recompensa__condicion"><span>{c.rewards.sword.conditionLabel}</span>{c.rewards.sword.condition}</p>
+              </div>
+            </article>
+            <article className="recompensa recompensa--moral">
+              <div className="recompensa__cuerpo">
+                <p className="recompensa__etiqueta">{c.rewards.morality.label}</p>
+                <h3 className="recompensa__nombre">{c.rewards.morality.name}</h3>
+                <p className="recompensa__texto">{c.rewards.morality.description}</p>
+                <p className="recompensa__valor">{c.rewards.morality.value}</p>
+              </div>
+              <figure className="recompensa__lamina recompensa__lamina--barra"><Imagen archivo="barra-de-moral.webp" alt={c.rewards.morality.alt} loading="lazy" /></figure>
+            </article>
+            <article className="recompensa recompensa--pocion">
+              <figure className="recompensa__lamina recompensa__lamina--frasco"><Imagen archivo="pocion-de-curacion.webp" alt={c.rewards.potion.alt} loading="lazy" /></figure>
+              <div className="recompensa__cuerpo">
+                <p className="recompensa__etiqueta">{c.rewards.potion.label}</p>
+                <h3 className="recompensa__nombre">{c.rewards.potion.name}</h3>
+                <p className="recompensa__texto">{c.rewards.potion.description}</p>
+                <p className="recompensa__valor recompensa__valor--vida">{c.rewards.potion.value}</p>
+                <p className="recompensa__condicion"><span>{c.rewards.potion.sourceLabel}</span>{c.rewards.potion.source}</p>
+              </div>
+            </article>
+          </div>
         </section>
 
         <section id="controles" className="seccion">
@@ -330,13 +369,6 @@ export default function App() {
               </div>
             </details>)}
           </div>
-        </section>
-
-        <section id="galeria" className="seccion">
-          <div className="seccion__cabecera"><p className="seccion__numero">{c.gallery.label}</p><h2 className="seccion__titulo">{c.gallery.title}</h2><p className="seccion__texto">{c.gallery.subtitle}</p></div>
-          <div className="galeria">{regiones.map(([key, archivo]) => <figure className="galeria__lugar" key={key}>
-            <Imagen archivo={archivo} alt={c.gallery[key].alt} /><figcaption><strong>{c.gallery[key].name}</strong><span>{c.gallery[key].description}</span></figcaption>
-          </figure>)}</div>
         </section>
 
         <section id="descargables" className="seccion">
@@ -405,7 +437,6 @@ export default function App() {
       {mecanicaAmpliada !== null && <dialog className="visor-controles visor-mecanica" ref={mecanicaRef} aria-label={t('mechanics.captureLabel', { title: c.mechanics[mecanicas[mecanicaAmpliada][0]].title })} onClick={(evento) => { if (evento.target === evento.currentTarget) setMecanicaAmpliada(null); }}>
         <div className="dialogo__barra"><SelectorIdioma {...idiomaProps} /><button type="button" className="visor-controles__cerrar" onClick={() => setMecanicaAmpliada(null)}>{c.common.close} <span aria-hidden="true">×</span></button></div>
         <Imagen archivo={mecanicas[mecanicaAmpliada][1]} alt={c.mechanics[mecanicas[mecanicaAmpliada][0]].alt} loading="eager" />
-        <p className="mecanicas__nota">{c.mechanics.screenshotNote}</p>
       </dialog>}
     </>
   );

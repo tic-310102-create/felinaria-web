@@ -1,0 +1,44 @@
+[
+  {
+    "original": "images/dagas de rosa.png",
+    "optimized": "images/espada-de-rosa.webp",
+    "format": "PNG",
+    "width": 1024,
+    "height": 1536,
+    "originalBytes": 1243136,
+    "optimizedBytes": 67468,
+    "quality": 85,
+    "sha256Original": "632e575ebf63aa912e9fb643053cb0e341e452930a5776af4205b5d611dbbec6",
+    "sha256Pixels": "1c7cb3427db5bcb3dfbd32ce47a6556a872bad9738cb4ac016029cd9e27d6003",
+    "backup": "originales-locales/rewards-20261107-133418/images/dagas de rosa.png",
+    "reductionPercent": 94.57
+  },
+  {
+    "original": "images/moral.png",
+    "optimized": "images/barra-de-moral.webp",
+    "format": "PNG",
+    "width": 2172,
+    "height": 724,
+    "originalBytes": 742947,
+    "optimizedBytes": 90738,
+    "quality": 85,
+    "sha256Original": "49a693f02bbd871f36a661b2efa9562e188e32ba515629fa3f37f0b41179c209",
+    "sha256Pixels": "18cf2c224702cbbf4e0a3f1895daacda2130a93f04351f3f149ed61e5aaddb94",
+    "backup": "originales-locales/rewards-20261107-133418/images/moral.png",
+    "reductionPercent": 87.79
+  },
+  {
+    "original": "images/pocion de curacion.png",
+    "optimized": "images/pocion-de-curacion.webp",
+    "format": "PNG",
+    "width": 1069,
+    "height": 1472,
+    "originalBytes": 1445462,
+    "optimizedBytes": 160890,
+    "quality": 85,
+    "sha256Original": "c332b1dee719593d6c48aef71b59fd3cff61f690085ae8c40f118025be41c56b",
+    "sha256Pixels": "95f198531a9b0fbfd9a8e09ba9a2f333e5fd06f7b1c2de8d8e6252d88b791594",
+    "backup": "originales-locales/rewards-20261107-133418/images/pocion de curacion.png",
+    "reductionPercent": 88.87
+  }
+]

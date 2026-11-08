@@ -70,5 +70,113 @@
   "interaccion-npc.webp": {
     "width": 1168,
     "height": 550
+  },
+  "mapa-felinaria.webp": {
+    "width": 880,
+    "height": 687
+  },
+  "aldea-del-sol.webp": {
+    "width": 1600,
+    "height": 1160
+  },
+  "colonia-del-oleaje-detalle.webp": {
+    "width": 1200,
+    "height": 896
+  },
+  "frontera-de-la-colonia.webp": {
+    "width": 1599,
+    "height": 1155
+  },
+  "frontera-de-la-colonia-768.webp": {
+    "width": 768,
+    "height": 555
+  },
+  "frontera-de-la-colonia-240.webp": {
+    "width": 240,
+    "height": 173
+  },
+  "sendero-de-los-murmullos.webp": {
+    "width": 1200,
+    "height": 896
+  },
+  "sendero-de-los-murmullos-768.webp": {
+    "width": 768,
+    "height": 573
+  },
+  "sendero-de-los-murmullos-240.webp": {
+    "width": 240,
+    "height": 179
+  },
+  "paso-de-la-encrucijada.webp": {
+    "width": 1600,
+    "height": 1177
+  },
+  "paso-de-la-encrucijada-768.webp": {
+    "width": 768,
+    "height": 565
+  },
+  "paso-de-la-encrucijada-240.webp": {
+    "width": 240,
+    "height": 177
+  },
+  "el-paso-roto.webp": {
+    "width": 1200,
+    "height": 896
+  },
+  "el-paso-roto-768.webp": {
+    "width": 768,
+    "height": 573
+  },
+  "el-paso-roto-240.webp": {
+    "width": 240,
+    "height": 179
+  },
+  "guarida-del-gran-alfa.webp": {
+    "width": 1200,
+    "height": 896
+  },
+  "aldea-del-sol-768.webp": {
+    "width": 768,
+    "height": 557
+  },
+  "aldea-del-sol-240.webp": {
+    "width": 240,
+    "height": 174
+  },
+  "colonia-del-oleaje-detalle-768.webp": {
+    "width": 768,
+    "height": 573
+  },
+  "colonia-del-oleaje-detalle-240.webp": {
+    "width": 240,
+    "height": 179
+  },
+  "colonia-sol-768.webp": {
+    "width": 768,
+    "height": 768
+  },
+  "colonia-sol-240.webp": {
+    "width": 240,
+    "height": 240
+  },
+  "guarida-del-gran-alfa-768.webp": {
+    "width": 768,
+    "height": 573
+  },
+  "guarida-del-gran-alfa-240.webp": {
+    "width": 240,
+    "height": 179
+  },
+  "espada-de-rosa.webp": {
+    "width": 1024,
+    "height": 1536
+  },
+  "barra-de-moral.webp": {
+    "width": 2172,
+    "height": 724
+  },
+  "pocion-de-curacion.webp": {
+    "width": 1069,
+    "height": 1472
   }
 }

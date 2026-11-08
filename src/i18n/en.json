@@ -4,11 +4,13 @@
     "description": "Felinaria: a narrative adventure with RPG elements, exploration, moral choices and action combat in a world of feline colonies."
   },
   "language": {"label": "Website language", "es": "Switch to Spanish", "en": "Switch to English"},
-  "nav": {"home": "Home", "story": "Story", "characters": "Characters", "mechanics": "Mechanics", "controls": "Controls", "gallery": "Gallery", "downloads": "Downloads", "team": "Team", "label": "Main navigation", "menu": "Menu", "open": "Open navigation menu", "close": "Close navigation menu"},
+  "nav": {"home": "Home", "story": "Story", "characters": "Characters", "world": "World", "niveles": "Levels", "mechanics": "Mechanics", "rewards": "Rewards", "controls": "Controls", "downloads": "Downloads", "team": "Team", "label": "Main navigation", "menu": "Menu", "open": "Open navigation menu", "close": "Close navigation menu"},
   "common": {"close": "Close", "previous": "Previous image", "next": "Next image", "enlarge": "Enlarge image: {title}", "imageOf": "Image {index} of {count}", "selectImage": "View image {index} of {count}", "imageAlt": "{title}, image {index} of {count}"},
   "hero": {
     "eyebrow": "Narrative adventure · Action RPG · 2D pixel art",
+    "omen": "The Last Omen",
     "subtitle": "A feline apprentice, a forgotten prophecy, and two rival communities on the brink of a war neither ever wanted.",
+    "ctaExplore": "Explore the world",
     "rating": "Rated E10+", "genre": "Narrative adventure · Light RPG", "combat": "Action combat · Free movement"
   },
   "story": {
@@ -77,7 +79,7 @@
   },
   "mechanics": {
     "label": "Game mechanics", "title": "Your adventure, your choices", "subtitle": "Discover how to explore Felinaria, meet its inhabitants, fight and shape your own story.",
-    "screenshotNote": "Original screenshots show the game's Spanish interface.", "enlargeHint": "Select the screenshot to enlarge it", "captureLabel": "Gameplay screenshot: {title}",
+    "enlargeHint": "Select the screenshot to enlarge it", "captureLabel": "Gameplay screenshot: {title}",
     "exploration": {"title": "Exploration and interaction", "description": "Travel through Felinaria's colonies and varied landscapes, discover new places and interact with their inhabitants. Encounters and story objectives lead the protagonist through an adventure filled with secrets and challenges.", "alt": "The apprentice investigates tracks beside a river during an exploration mission"},
     "dialogue": {"title": "Dialogue and characters", "description": "Meet the inhabitants of Felinaria and uncover their stories through conversations woven into the adventure. Some encounters offer different responses, letting you take part in key moments of the narrative.", "alt": "The apprentice speaks with his mentor at the training camp"},
     "morality": {"title": "Choices and morality", "description": "Every choice can leave a mark on the story. The protagonist's decisions are recorded and can change his morality, shaping later conversations and the consequences of certain events.", "alt": "A story decision offers three responses with different moral consequences"},
@@ -86,6 +88,13 @@
     "appearanceLabel": "Choose an appearance", "appearanceAlt": "The apprentice with a {coat} coat", "selectCoat": "Preview the {coat} coat", "demoNote": "Preview the four appearances. This selection only changes the website demo; it does not change your character in the game.",
     "coats": {"white": "white", "gray": "gray", "black": "black", "siamese": "Siamese"},
     "inspirations": "Inspired by Warrior Cats, Cattails, Cult of the Lamb and Fire Emblem, with character designs that draw on the spirit of Monster Hunter's Felynes."
+  },
+  "rewards": {
+    "label": "Spoils of the adventure", "title": "Rewards",
+    "intro": "Three official rewards accompany the protagonist: a weapon forged in battle, morality that grows with every good deed, and potions found in the chests across the map.",
+    "sword": {"name": "Rosa's Sword", "label": "Combat reward", "conditionLabel": "Condition", "condition": "Defeat Rosa", "description": "Weapon obtained as a reward after defeating Rosa. Its distinctive crimson rose represents the confrontation that marks a new stage in the protagonist's adventure.", "alt": "Rosa's Sword with a silver blade and a crimson rose at the hilt"},
+    "morality": {"name": "Morality", "label": "Progress through good deeds", "value": "25/50", "description": "Morality rises whenever the protagonist performs good deeds for the benefit of their colony. It represents the positive impact of their decisions and their commitment to the community.", "alt": "Blue morality bar with a golden frame showing 25 of 50"},
+    "potion": {"name": "Healing potion", "label": "Consumable", "value": "+25 HP", "sourceLabel": "Source", "source": "Map chests", "description": "Consumable item found inside the chests scattered across Felinaria's scenarios. When used, it restores 25 health points to the character without exceeding their maximum health.", "alt": "Glass vial with a cork and red liquid shaped like a heart"}
   },
   "controls": {
     "label": "Controls", "title": "Game controls", "subtitle": "Master every move and get ready to write your own story.", "keyboard": "Keyboard", "gamepad": "Controller", "or": "or", "action": "action", "actions": "actions", "capture": "Original controls screenshot: {title}", "viewer": "Enlarged image: {title}", "hint": "Select the image to enlarge it",
@@ -105,24 +114,34 @@
       "answer": {"name": "Choose a moral response", "alternative": "or click the corresponding option"}
     }
   },
-  "gallery": {
-    "label": "Gallery", "title": "The lands of Felinaria", "subtitle": "Discover the feline colonies and the home of the Fang Pack.",
-    "sun": {"name": "Sun Colony", "description": "The protagonist's home and the place where his adventure begins. Much of the story unfolds here as the young apprentice trains and prepares to face the dangers threatening Felinaria.", "alt": "Illustration of Sun Colony, with mountain scenery and sunlit towers"},
-    "moon": {"name": "Moon Colony", "description": "The most distant and secluded of the three feline colonies. Its inhabitants are known for their wary, cautious nature. Although they trade with the other colonies, they prefer to remain independent and protect their territories.", "alt": "Illustration of Moon Colony beneath a star-filled sky"},
-    "tide": {"name": "Tide Colony", "description": "A neighbor of Sun Colony, known for its trading activities and its ties to the other feline communities. The exchange of resources and relationships between territories play an important part in everyday life.", "alt": "Illustration of Tide Colony's harbor and coastal cliffs"},
-    "fang": {"name": "Fang Pack", "description": "A community of wild dogs living on an isolated island beyond the dangerous Tempest Ocean. Its conflicts with the feline colonies pose a growing threat, while the mystery of how the dogs cross those waters remains unanswered.", "alt": "Illustration of the Fang Pack's fortress on an isolated island"}
-  },
   "downloads": {
-    "label": "Downloads", "title": "Take Felinaria with you", "subtitle": "Explore Felinaria in your browser or install our upcoming mobile app.", "available": "Available", "development": "In development",
+    "label": "Downloads", "title": "Take Felinaria with you", "subtitle": "Explore Felinaria in your browser or download the app for Android.", "available": "Available", "development": "In development",
     "webType": "Installable website", "webName": "Felinaria Web", "webAlt": "Felinaria Web emblem", "webDescription": "Install Felinaria on your device and explore its stories, characters and core content, even offline after the initial load.", "webCompatibility": "For compatible browsers and devices. On iPhone and iPad, use your browser's sharing options.",
     "installed": "Felinaria is already installed in this window", "install": "Install Felinaria Web", "manual": "Install it from your browser's menu. See the guide to find the option.", "showWebTutorial": "View installation guide", "hideWebTutorial": "Hide installation guide", "webTutorialIntro": "Installation is handled by your browser; the available option may vary by device.",
     "results": {"accepted": "Installation accepted. Look for Felinaria among your apps.", "cancelled": "Installation cancelled. You can use the installation guide whenever you like.", "error": "The installation dialog could not be opened. Follow the installation guide."},
     "androidTutorial": ["Open Felinaria in a compatible browser.", "Open the browser menu.", "Look for ‘Install app’ or ‘Add to home screen’.", "Confirm installation or shortcut creation.", "Open Felinaria from its icon."],
     "pcLabel": "Windows / PC", "pcTutorial": ["Open Felinaria in Chrome, Edge or Brave.", "Use the installation option in the browser or its menu.", "Confirm the installation.", "Open Felinaria from its installed shortcut."],
     "iosLabel": "iPhone / iPad", "iosTutorial": ["Open Felinaria in a compatible browser.", "Open the sharing menu.", "Select ‘Add to Home Screen’ when available.", "Confirm and open Felinaria from its icon."],
-    "apkType": "Android app", "apkName": "Felinaria for Android", "apkAlt": "Android device", "apkDescription": "We are developing a version for Android devices. You will soon be able to download and install it directly on your phone.", "apkCompatibility": "A standalone Android app. The APK does not run directly on iPhone or iPad.", "downloadApk": "Download APK", "apkOffline": "Download unavailable offline", "apkSoon": "Download APK · Coming soon", "showApkTutorial": "How to install Felinaria on Android", "hideApkTutorial": "Hide Android installation guide",
-    "apkTutorial": ["Once it is released, select ‘Download APK’.", "Wait for the download to finish.", "Open the file from Downloads or your file manager.", "If Android asks you to allow installations from that source app, check where the file came from and grant permission only if you trust it.", "Confirm the installation by following the system prompts.", "Open Felinaria from your app menu."],
+    "apkType": "Android app", "apkName": "Felinaria for Android", "apkAlt": "Android device", "apkDescription": "Download Felinaria for Android and install the video game directly on your compatible device.", "apkCompatibility": "A standalone Android app. The APK does not run directly on iPhone or iPad.", "downloadApk": "Download APK for Android", "apkOffline": "Download unavailable offline", "apkSoon": "Download APK · Coming soon", "showApkTutorial": "How to install Felinaria on Android", "hideApkTutorial": "Hide Android installation guide",
+    "apkTutorial": ["Select ‘Download APK for Android’ and wait for felinaria-android.apk to finish downloading.", "Open the file from Downloads or your file manager.", "If Android asks you to allow installations from that source app, check where the file came from and grant permission only if you trust it.", "Confirm the installation by following the system prompts.", "Open Felinaria from your app menu."],
     "warning": "Only install APK files from trusted sources. Do not disable your device's general security protections."
+  },
+  "world": {
+    "label": "World atlas", "title": "Explore Felinaria",
+    "intro": "From the map to its territories. Step into the feline colonies and discover the landscapes that shape this adventure.",
+    "indexLabel": "Explore the world", "artLabel": "World artwork", "imageError": "This illustration could not be loaded. Check your connection or reopen the image.",
+    "map": {"link": "Map", "title": "The world of Felinaria", "description": "The game takes place in a fantasy world organized into Cat Colonies, with spaces dedicated to community life, training and exploration. This map shows the main regions and colonies that make up the game world, as well as the routes connecting the different territories. Sun Colony serves as the protagonist's main starting point, while the other regions represent the commercial, territorial and political relationships between the different communities.", "alt": "Illustrated map of Felinaria showing Sun Colony, Moon Colony, Tide Colony and the Fang Pack's island", "open": "Enlarge map"},
+    "levels": {"link": "Levels", "label": "The game's progression", "title": "Map Levels", "intro": "Eight official scenes, in order: from the apprentices' camp to the final confrontation with the Great Alpha.", "open": "View scene", "openAria": "View level {number}: {name}", "viewerTitle": "Level {number} · {name}", "number": "Level {number}", "note": "The eight official levels follow their narrative progression order; select any level to enlarge its full illustration.",
+      "apprenticeCamp": {"title": "Apprentices' Camp", "description": "Sacred place where the Great Oak shelters the initial training of the feline apprentices and Master Mentor guards the ancestral traditions (Level 1).", "alt": "Illustration of the Apprentices' Camp, with tents, a campfire and training areas among the trees"},
+      "borderCrossing": {"title": "Border Crossing", "description": "Rocky ramparts and defiles where Commander Rosa and the vanguards of the Fang Pack attempt to break the colonial defenses (Level 2).", "alt": "Illustration of the Border Crossing, with a river, tracks, ruins and a blue-lit stone arch"},
+      "crossroadsPass": {"title": "Crossroads Pass", "description": "A vast untamed crossroads where the encounter with the helpless cub triggers the moral dilemma between mercy and colonial justice (Level 3).", "alt": "Illustration of Crossroads Pass, with flowers around a stone, columns and feline sculptures"},
+      "sunColonyActTwo": {"title": "Sun Colony (Act II)", "description": "The main settlement under emergency conditions, where the Council of Leaders and the Great Oak convene the assembly before the imminent canine invasion (Level 4).", "alt": "Illustration of Sun Colony in Act II, with mountain scenery and sunlit towers"},
+      "whispersPath": {"title": "Path of Whispers", "description": "A thick, gloomy forest covered in dense mists where hostile creatures lurk along the kingdom's intermediate routes (Level 5).", "alt": "Illustration of the Path of Whispers, with trees, symbol-carved stones and an abandoned cart"},
+      "tideColony": {"title": "Tide Colony", "description": "A coastal settlement of fishermen and maritime lookouts where the wise Coastal Leader forges the feline alliance of resistance (Level 6).", "alt": "Illustration of Tide Colony, with wooden jetties, boats and wave-pattern banners"},
+      "brokenPass": {"title": "The Broken Pass", "description": "A collapsed bridge and ruined defile crossing the mountain abysses toward the fortifications of enemy territory (Level 7).", "alt": "Illustration of the Broken Pass, with walkways above a ravine and fortifications bearing canine emblems"},
+      "greatAlphaDen": {"title": "The Great Alpha's Den", "description": "A fortified bastion and central volcanic chamber where Great Alpha Rastrojo awaits the decisive confrontation for Felinaria (Level 8).", "alt": "Illustration of the Great Alpha's Den, with a stone hall, a fang-decorated throne, canine banners and braziers"}
+    },
+    "viewer": {"zoomControls": "Illustration zoom controls", "zoomIn": "Zoom in", "zoomOut": "Zoom out", "zoomLevel": "Zoom level", "fit": "Fit", "panLabel": "Scrollable illustration; focus here and use the arrow keys to pan the enlarged image", "views": "Available views", "viewCount": "View {index} of {count}", "help": "Use the buttons to zoom, then pan inside the image with touch, the mouse or keyboard arrow keys. Escape closes the viewer. Zoom does not add detail to the original artwork."}
   },
   "team": {"title": "Development team", "copyright": "© 2026 Felinaria."},
   "status": {"offline": "Offline · content available without Internet", "workerError": "The offline application could not be registered:"}

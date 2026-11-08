@@ -1,0 +1,1142 @@
+{
+  "widths": [
+    320,
+    360,
+    375,
+    390,
+    414,
+    430,
+    600,
+    768,
+    900,
+    1024,
+    1280,
+    1366,
+    1440,
+    1536,
+    1600,
+    1920,
+    2560,
+    3840
+  ],
+  "languages": [
+    "es",
+    "en"
+  ],
+  "zoomEquivalent": [
+    {
+      "physicalWidth": 1440,
+      "scale": 1.25,
+      "cssWidth": 1152
+    },
+    {
+      "physicalWidth": 1440,
+      "scale": 1.5,
+      "cssWidth": 960
+    },
+    {
+      "physicalWidth": 1440,
+      "scale": 2,
+      "cssWidth": 720
+    },
+    {
+      "physicalWidth": 1920,
+      "scale": 2,
+      "cssWidth": 960
+    },
+    {
+      "physicalWidth": 3840,
+      "scale": 2,
+      "cssWidth": 1920
+    }
+  ],
+  "layout": [
+    {
+      "language": "es",
+      "width": 320,
+      "rows": {
+        "rewards": [
+          1,
+          1,
+          1
+        ],
+        "levels": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "characters": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "mechanics": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "downloads": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "language": "es",
+      "width": 360,
+      "rows": {
+        "rewards": [
+          1,
+          1,
+          1
+        ],
+        "levels": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "characters": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "mechanics": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "downloads": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "language": "es",
+      "width": 375,
+      "rows": {
+        "rewards": [
+          1,
+          1,
+          1
+        ],
+        "levels": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "characters": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "mechanics": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "downloads": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "language": "es",
+      "width": 390,
+      "rows": {
+        "rewards": [
+          1,
+          1,
+          1
+        ],
+        "levels": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "characters": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "mechanics": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "downloads": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "language": "es",
+      "width": 414,
+      "rows": {
+        "rewards": [
+          1,
+          1,
+          1
+        ],
+        "levels": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "characters": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "mechanics": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "downloads": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "language": "es",
+      "width": 430,
+      "rows": {
+        "rewards": [
+          1,
+          1,
+          1
+        ],
+        "levels": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "characters": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "mechanics": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "downloads": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "language": "es",
+      "width": 600,
+      "rows": {
+        "rewards": [
+          1,
+          1,
+          1
+        ],
+        "levels": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "characters": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "mechanics": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "downloads": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "language": "es",
+      "width": 768,
+      "rows": {
+        "rewards": [
+          2,
+          1
+        ],
+        "levels": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "characters": [
+          2,
+          2,
+          1
+        ],
+        "mechanics": [
+          2,
+          2
+        ],
+        "downloads": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "language": "es",
+      "width": 900,
+      "rows": {
+        "rewards": [
+          2,
+          1
+        ],
+        "levels": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "characters": [
+          2,
+          2,
+          1
+        ],
+        "mechanics": [
+          2,
+          2
+        ],
+        "downloads": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "language": "es",
+      "width": 1024,
+      "rows": {
+        "rewards": [
+          2,
+          1
+        ],
+        "levels": [
+          3,
+          3,
+          2
+        ],
+        "characters": [
+          3,
+          2
+        ],
+        "mechanics": [
+          2,
+          2
+        ],
+        "downloads": [
+          2
+        ]
+      }
+    },
+    {
+      "language": "es",
+      "width": 1280,
+      "rows": {
+        "rewards": [
+          3
+        ],
+        "levels": [
+          3,
+          3,
+          2
+        ],
+        "characters": [
+          3,
+          2
+        ],
+        "mechanics": [
+          2,
+          2
+        ],
+        "downloads": [
+          2
+        ]
+      }
+    },
+    {
+      "language": "es",
+      "width": 1366,
+      "rows": {
+        "rewards": [
+          3
+        ],
+        "levels": [
+          4,
+          4
+        ],
+        "characters": [
+          3,
+          2
+        ],
+        "mechanics": [
+          2,
+          2
+        ],
+        "downloads": [
+          2
+        ]
+      }
+    },
+    {
+      "language": "es",
+      "width": 1440,
+      "rows": {
+        "rewards": [
+          3
+        ],
+        "levels": [
+          4,
+          4
+        ],
+        "characters": [
+          3,
+          2
+        ],
+        "mechanics": [
+          2,
+          2
+        ],
+        "downloads": [
+          2
+        ]
+      }
+    },
+    {
+      "language": "es",
+      "width": 1536,
+      "rows": {
+        "rewards": [
+          3
+        ],
+        "levels": [
+          4,
+          4
+        ],
+        "characters": [
+          3,
+          2
+        ],
+        "mechanics": [
+          2,
+          2
+        ],
+        "downloads": [
+          2
+        ]
+      }
+    },
+    {
+      "language": "es",
+      "width": 1600,
+      "rows": {
+        "rewards": [
+          3
+        ],
+        "levels": [
+          4,
+          4
+        ],
+        "characters": [
+          3,
+          2
+        ],
+        "mechanics": [
+          2,
+          2
+        ],
+        "downloads": [
+          2
+        ]
+      }
+    },
+    {
+      "language": "es",
+      "width": 1920,
+      "rows": {
+        "rewards": [
+          3
+        ],
+        "levels": [
+          4,
+          4
+        ],
+        "characters": [
+          3,
+          2
+        ],
+        "mechanics": [
+          2,
+          2
+        ],
+        "downloads": [
+          2
+        ]
+      }
+    },
+    {
+      "language": "es",
+      "width": 2560,
+      "rows": {
+        "rewards": [
+          3
+        ],
+        "levels": [
+          4,
+          4
+        ],
+        "characters": [
+          3,
+          2
+        ],
+        "mechanics": [
+          2,
+          2
+        ],
+        "downloads": [
+          2
+        ]
+      }
+    },
+    {
+      "language": "es",
+      "width": 3840,
+      "rows": {
+        "rewards": [
+          3
+        ],
+        "levels": [
+          4,
+          4
+        ],
+        "characters": [
+          3,
+          2
+        ],
+        "mechanics": [
+          2,
+          2
+        ],
+        "downloads": [
+          2
+        ]
+      }
+    },
+    {
+      "language": "en",
+      "width": 320,
+      "rows": {
+        "rewards": [
+          1,
+          1,
+          1
+        ],
+        "levels": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "characters": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "mechanics": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "downloads": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "language": "en",
+      "width": 360,
+      "rows": {
+        "rewards": [
+          1,
+          1,
+          1
+        ],
+        "levels": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "characters": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "mechanics": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "downloads": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "language": "en",
+      "width": 375,
+      "rows": {
+        "rewards": [
+          1,
+          1,
+          1
+        ],
+        "levels": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "characters": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "mechanics": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "downloads": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "language": "en",
+      "width": 390,
+      "rows": {
+        "rewards": [
+          1,
+          1,
+          1
+        ],
+        "levels": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "characters": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "mechanics": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "downloads": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "language": "en",
+      "width": 414,
+      "rows": {
+        "rewards": [
+          1,
+          1,
+          1
+        ],
+        "levels": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "characters": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "mechanics": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "downloads": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "language": "en",
+      "width": 430,
+      "rows": {
+        "rewards": [
+          1,
+          1,
+          1
+        ],
+        "levels": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "characters": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "mechanics": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "downloads": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "language": "en",
+      "width": 600,
+      "rows": {
+        "rewards": [
+          1,
+          1,
+          1
+        ],
+        "levels": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "characters": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "mechanics": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "downloads": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "language": "en",
+      "width": 768,
+      "rows": {
+        "rewards": [
+          2,
+          1
+        ],
+        "levels": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "characters": [
+          2,
+          2,
+          1
+        ],
+        "mechanics": [
+          2,
+          2
+        ],
+        "downloads": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "language": "en",
+      "width": 900,
+      "rows": {
+        "rewards": [
+          2,
+          1
+        ],
+        "levels": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "characters": [
+          2,
+          2,
+          1
+        ],
+        "mechanics": [
+          2,
+          2
+        ],
+        "downloads": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "language": "en",
+      "width": 1024,
+      "rows": {
+        "rewards": [
+          2,
+          1
+        ],
+        "levels": [
+          3,
+          3,
+          2
+        ],
+        "characters": [
+          3,
+          2
+        ],
+        "mechanics": [
+          2,
+          2
+        ],
+        "downloads": [
+          2
+        ]
+      }
+    },
+    {
+      "language": "en",
+      "width": 1280,
+      "rows": {
+        "rewards": [
+          3
+        ],
+        "levels": [
+          3,
+          3,
+          2
+        ],
+        "characters": [
+          3,
+          2
+        ],
+        "mechanics": [
+          2,
+          2
+        ],
+        "downloads": [
+          2
+        ]
+      }
+    },
+    {
+      "language": "en",
+      "width": 1366,
+      "rows": {
+        "rewards": [
+          3
+        ],
+        "levels": [
+          4,
+          4
+        ],
+        "characters": [
+          3,
+          2
+        ],
+        "mechanics": [
+          2,
+          2
+        ],
+        "downloads": [
+          2
+        ]
+      }
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "rows": {
+        "rewards": [
+          3
+        ],
+        "levels": [
+          4,
+          4
+        ],
+        "characters": [
+          3,
+          2
+        ],
+        "mechanics": [
+          2,
+          2
+        ],
+        "downloads": [
+          2
+        ]
+      }
+    },
+    {
+      "language": "en",
+      "width": 1536,
+      "rows": {
+        "rewards": [
+          3
+        ],
+        "levels": [
+          4,
+          4
+        ],
+        "characters": [
+          3,
+          2
+        ],
+        "mechanics": [
+          2,
+          2
+        ],
+        "downloads": [
+          2
+        ]
+      }
+    },
+    {
+      "language": "en",
+      "width": 1600,
+      "rows": {
+        "rewards": [
+          3
+        ],
+        "levels": [
+          4,
+          4
+        ],
+        "characters": [
+          3,
+          2
+        ],
+        "mechanics": [
+          2,
+          2
+        ],
+        "downloads": [
+          2
+        ]
+      }
+    },
+    {
+      "language": "en",
+      "width": 1920,
+      "rows": {
+        "rewards": [
+          3
+        ],
+        "levels": [
+          4,
+          4
+        ],
+        "characters": [
+          3,
+          2
+        ],
+        "mechanics": [
+          2,
+          2
+        ],
+        "downloads": [
+          2
+        ]
+      }
+    },
+    {
+      "language": "en",
+      "width": 2560,
+      "rows": {
+        "rewards": [
+          3
+        ],
+        "levels": [
+          4,
+          4
+        ],
+        "characters": [
+          3,
+          2
+        ],
+        "mechanics": [
+          2,
+          2
+        ],
+        "downloads": [
+          2
+        ]
+      }
+    },
+    {
+      "language": "en",
+      "width": 3840,
+      "rows": {
+        "rewards": [
+          3
+        ],
+        "levels": [
+          4,
+          4
+        ],
+        "characters": [
+          3,
+          2
+        ],
+        "mechanics": [
+          2,
+          2
+        ],
+        "downloads": [
+          2
+        ]
+      }
+    }
+  ],
+  "screenshots": null
+}

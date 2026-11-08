@@ -1,0 +1,11 @@
+{
+  "engines": [
+    "chromium",
+    "firefox",
+    "webkit"
+  ],
+  "apkSha256": "8a9d768a2d8f4bd239f9d09576fd31cd8e9d1300281838fee81c48d30786a90b",
+  "apkBytes": 38371606,
+  "levels": 8,
+  "regionsRetired": true
+}

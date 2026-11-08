@@ -1,0 +1,23 @@
+{
+  "subpath": "/atlas/",
+  "baselineCache": "felinaria-d45e744104f2941a",
+  "currentCache": "felinaria-644c217c9e0be4e0",
+  "cachedWebP": 45,
+  "baselineClientArtworkOffline": true,
+  "warmClientAutoUpdated": true,
+  "mapOffline": true,
+  "regionsRetired": true,
+  "allLevelsOffline": true,
+  "rewardsOffline": true,
+  "languagesOffline": [
+    "es",
+    "en"
+  ],
+  "responsiveVariantsOffline": true,
+  "preferenceAfterRestart": true,
+  "installability": {
+    "installabilityErrors": []
+  },
+  "serviceWorkerImageResponses": 39,
+  "consoleErrors": []
+}

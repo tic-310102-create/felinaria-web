@@ -17,7 +17,7 @@ export function useLanguage() {
     const headerBottom = document.querySelector('.cabecera')?.getBoundingClientRect().bottom ?? 0;
     const sections = [...document.querySelectorAll('main section[id], footer[id]')];
     const readingLine = headerBottom + Math.max(0, window.innerHeight - headerBottom) * 0.35;
-    const section = sections.find((element) => {
+    const section = [...sections].reverse().find((element) => {
       const rect = element.getBoundingClientRect();
       return rect.top <= readingLine && rect.bottom > readingLine;
     }) ?? sections.find((element) => element.getBoundingClientRect().bottom > headerBottom + 1);

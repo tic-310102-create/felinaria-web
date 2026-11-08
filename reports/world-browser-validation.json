@@ -1,0 +1,378 @@
+{
+  "responsive": [
+    {
+      "language": "es",
+      "width": 320,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 1,
+      "levels": 8,
+      "levelColumns": 1
+    },
+    {
+      "language": "es",
+      "width": 360,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 1,
+      "levels": 8,
+      "levelColumns": 1
+    },
+    {
+      "language": "es",
+      "width": 375,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 1,
+      "levels": 8,
+      "levelColumns": 1
+    },
+    {
+      "language": "es",
+      "width": 390,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 1,
+      "levels": 8,
+      "levelColumns": 1
+    },
+    {
+      "language": "es",
+      "width": 414,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 1,
+      "levels": 8,
+      "levelColumns": 1
+    },
+    {
+      "language": "es",
+      "width": 430,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 1,
+      "levels": 8,
+      "levelColumns": 1
+    },
+    {
+      "language": "es",
+      "width": 600,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 1,
+      "levels": 8,
+      "levelColumns": 1
+    },
+    {
+      "language": "es",
+      "width": 768,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 1,
+      "levels": 8,
+      "levelColumns": 2
+    },
+    {
+      "language": "es",
+      "width": 820,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 1,
+      "levels": 8,
+      "levelColumns": 2
+    },
+    {
+      "language": "es",
+      "width": 900,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 1,
+      "levels": 8,
+      "levelColumns": 2
+    },
+    {
+      "language": "es",
+      "width": 1024,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 2,
+      "levels": 8,
+      "levelColumns": 3
+    },
+    {
+      "language": "es",
+      "width": 1280,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 2,
+      "levels": 8,
+      "levelColumns": 3
+    },
+    {
+      "language": "es",
+      "width": 1366,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 2,
+      "levels": 8,
+      "levelColumns": 4
+    },
+    {
+      "language": "es",
+      "width": 1440,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 2,
+      "levels": 8,
+      "levelColumns": 4
+    },
+    {
+      "language": "es",
+      "width": 1536,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 2,
+      "levels": 8,
+      "levelColumns": 4
+    },
+    {
+      "language": "es",
+      "width": 1600,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 2,
+      "levels": 8,
+      "levelColumns": 4
+    },
+    {
+      "language": "es",
+      "width": 1920,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 2,
+      "levels": 8,
+      "levelColumns": 4
+    },
+    {
+      "language": "es",
+      "width": 2560,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 2,
+      "levels": 8,
+      "levelColumns": 4
+    },
+    {
+      "language": "es",
+      "width": 3840,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 2,
+      "levels": 8,
+      "levelColumns": 4
+    },
+    {
+      "language": "en",
+      "width": 320,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 1,
+      "levels": 8,
+      "levelColumns": 1
+    },
+    {
+      "language": "en",
+      "width": 360,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 1,
+      "levels": 8,
+      "levelColumns": 1
+    },
+    {
+      "language": "en",
+      "width": 375,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 1,
+      "levels": 8,
+      "levelColumns": 1
+    },
+    {
+      "language": "en",
+      "width": 390,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 1,
+      "levels": 8,
+      "levelColumns": 1
+    },
+    {
+      "language": "en",
+      "width": 414,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 1,
+      "levels": 8,
+      "levelColumns": 1
+    },
+    {
+      "language": "en",
+      "width": 430,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 1,
+      "levels": 8,
+      "levelColumns": 1
+    },
+    {
+      "language": "en",
+      "width": 600,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 1,
+      "levels": 8,
+      "levelColumns": 1
+    },
+    {
+      "language": "en",
+      "width": 768,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 1,
+      "levels": 8,
+      "levelColumns": 2
+    },
+    {
+      "language": "en",
+      "width": 820,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 1,
+      "levels": 8,
+      "levelColumns": 2
+    },
+    {
+      "language": "en",
+      "width": 900,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 1,
+      "levels": 8,
+      "levelColumns": 2
+    },
+    {
+      "language": "en",
+      "width": 1024,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 2,
+      "levels": 8,
+      "levelColumns": 3
+    },
+    {
+      "language": "en",
+      "width": 1280,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 2,
+      "levels": 8,
+      "levelColumns": 3
+    },
+    {
+      "language": "en",
+      "width": 1366,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 2,
+      "levels": 8,
+      "levelColumns": 4
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 2,
+      "levels": 8,
+      "levelColumns": 4
+    },
+    {
+      "language": "en",
+      "width": 1536,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 2,
+      "levels": 8,
+      "levelColumns": 4
+    },
+    {
+      "language": "en",
+      "width": 1600,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 2,
+      "levels": 8,
+      "levelColumns": 4
+    },
+    {
+      "language": "en",
+      "width": 1920,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 2,
+      "levels": 8,
+      "levelColumns": 4
+    },
+    {
+      "language": "en",
+      "width": 2560,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 2,
+      "levels": 8,
+      "levelColumns": 4
+    },
+    {
+      "language": "en",
+      "width": 3840,
+      "overflow": false,
+      "mapZoom": true,
+      "mapColumns": 2,
+      "levels": 8,
+      "levelColumns": 4
+    }
+  ],
+  "landscape": [
+    [
+      568,
+      320
+    ],
+    [
+      740,
+      320
+    ],
+    [
+      844,
+      390
+    ],
+    [
+      1024,
+      600
+    ],
+    [
+      1920,
+      500
+    ]
+  ],
+  "intermediateWidthsPerLanguage": 91,
+  "touch": true,
+  "mousePan": true,
+  "localizedErrorFallback": true,
+  "regionsRetired": true,
+  "apkPublished": true,
+  "regressions": false,
+  "consoleErrors": [],
+  "httpErrors": [],
+  "screenshots": "C:\\Users\\gilbe\\AppData\\Local\\Temp\\opencode\\felinaria-world-qa"
+}

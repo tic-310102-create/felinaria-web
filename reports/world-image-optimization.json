@@ -1,0 +1,219 @@
+{
+  "backup": "originales-locales/world-20261106-105559",
+  "baselineCommit": "cbe4a99d03e96a753d7f4a74fc0f4c7256ba9ad5",
+  "baselineTests": "4/4 passed",
+  "baselineCache": "felinaria-d45e744104f2941a",
+  "images": [
+    {
+      "original": "images/niveles del mapa/mapa.jpeg",
+      "optimized": "images/mapa-felinaria.webp",
+      "format": "JPEG",
+      "width": 880,
+      "height": 687,
+      "originalBytes": 74944,
+      "optimizedBytes": 71438,
+      "quality": 85,
+      "sha256Original": "662737a1e49a0118709d8e8f62df7e4fb2131fd5956508547d9bfaeac052e03d",
+      "sha256Pixels": "1e3b812787c0c6f4be1d01b7a775d411ddc41c700e94dfe35d7634ee80e94253",
+      "backup": "originales-locales/world-20261106-105559/originals/mapa.jpeg",
+      "variants": [],
+      "reductionPercent": 4.68
+    },
+    {
+      "original": "images/niveles del mapa/aldea del sol.jpeg",
+      "optimized": "images/aldea-del-sol.webp",
+      "format": "JPEG",
+      "width": 1600,
+      "height": 1160,
+      "originalBytes": 247298,
+      "optimizedBytes": 196450,
+      "quality": 83,
+      "sha256Original": "de52e6f0e8dde5e596e0a63d2b94b8b90f7f95c4317015a5bf3d6a74c8acd90a",
+      "sha256Pixels": "24ca3175fe4220ad0df8ac97406c8ef559b879a556c94ca9dcf47eea2fc53914",
+      "backup": "originales-locales/world-20261106-105559/originals/aldea del sol.jpeg",
+      "variants": [
+        {
+          "file": "aldea-del-sol-768.webp",
+          "width": 768,
+          "height": 557,
+          "bytes": 76940
+        },
+        {
+          "file": "aldea-del-sol-240.webp",
+          "width": 240,
+          "height": 174,
+          "bytes": 10558
+        }
+      ],
+      "reductionPercent": 20.56
+    },
+    {
+      "original": "images/niveles del mapa/colonia de oleaje.jpeg",
+      "optimized": "images/colonia-del-oleaje-detalle.webp",
+      "format": "JPEG",
+      "width": 1200,
+      "height": 896,
+      "originalBytes": 228496,
+      "optimizedBytes": 219886,
+      "quality": 83,
+      "sha256Original": "af92d23b63dd5d13512b90292d0c4235028e576bf58af3662f3c654293e8c00b",
+      "sha256Pixels": "3b5878fde45913eb1ec80270fdd0a4bb8e91924963d7e4e0fe05ae578dd2d88c",
+      "backup": "originales-locales/world-20261106-105559/originals/colonia de oleaje.jpeg",
+      "variants": [
+        {
+          "file": "colonia-del-oleaje-detalle-768.webp",
+          "width": 768,
+          "height": 573,
+          "bytes": 109760
+        },
+        {
+          "file": "colonia-del-oleaje-detalle-240.webp",
+          "width": 240,
+          "height": 179,
+          "bytes": 13550
+        }
+      ],
+      "reductionPercent": 3.77
+    },
+    {
+      "original": "images/niveles del mapa/frontera de la colonia.jpeg",
+      "optimized": "images/frontera-de-la-colonia.webp",
+      "format": "JPEG",
+      "width": 1599,
+      "height": 1155,
+      "originalBytes": 271099,
+      "optimizedBytes": 226290,
+      "quality": 83,
+      "sha256Original": "d9dac7a085948f64ef2bb40516036b9e0688d8e8a7dc9d6a899e9d6b29e2bc69",
+      "sha256Pixels": "ff05f01b1bcede25147cc6e62ec7f0737a7b29a55241295a626fffb916c6c919",
+      "backup": "originales-locales/world-20261106-105559/originals/frontera de la colonia.jpeg",
+      "variants": [
+        {
+          "file": "frontera-de-la-colonia-768.webp",
+          "width": 768,
+          "height": 555,
+          "bytes": 92588
+        },
+        {
+          "file": "frontera-de-la-colonia-240.webp",
+          "width": 240,
+          "height": 173,
+          "bytes": 8996
+        }
+      ],
+      "reductionPercent": 16.53
+    },
+    {
+      "original": "images/niveles del mapa/sendero de murmullos.jpeg",
+      "optimized": "images/sendero-de-los-murmullos.webp",
+      "format": "JPEG",
+      "width": 1200,
+      "height": 896,
+      "originalBytes": 226061,
+      "optimizedBytes": 214232,
+      "quality": 83,
+      "sha256Original": "1f436524733ce28252ab19c121e3ad8ea64260e6a3bdb16a0b0ba887222c9f9b",
+      "sha256Pixels": "098f2ac70e7a561fc3a9f2cc839753b2a69f17ea00d6f114136fce1bcc07545e",
+      "backup": "originales-locales/world-20261106-105559/originals/sendero de murmullos.jpeg",
+      "variants": [
+        {
+          "file": "sendero-de-los-murmullos-768.webp",
+          "width": 768,
+          "height": 573,
+          "bytes": 118546
+        },
+        {
+          "file": "sendero-de-los-murmullos-240.webp",
+          "width": 240,
+          "height": 179,
+          "bytes": 13280
+        }
+      ],
+      "reductionPercent": 5.23
+    },
+    {
+      "original": "images/niveles del mapa/paso de inrusijada.jpeg",
+      "optimized": "images/paso-de-la-encrucijada.webp",
+      "format": "JPEG",
+      "width": 1600,
+      "height": 1177,
+      "originalBytes": 281349,
+      "optimizedBytes": 230548,
+      "quality": 83,
+      "sha256Original": "4df29b78f2d46731ee4b557e0fc03e31f795b70591c42e506fe77ee600915b35",
+      "sha256Pixels": "67ac2e963b8305ea117852a475d5171ba90163a3a0dd0f5520bf30fc7e9d603f",
+      "backup": "originales-locales/world-20261106-105559/originals/paso de inrusijada.jpeg",
+      "variants": [
+        {
+          "file": "paso-de-la-encrucijada-768.webp",
+          "width": 768,
+          "height": 565,
+          "bytes": 94360
+        },
+        {
+          "file": "paso-de-la-encrucijada-240.webp",
+          "width": 240,
+          "height": 177,
+          "bytes": 11234
+        }
+      ],
+      "reductionPercent": 18.06
+    },
+    {
+      "original": "images/niveles del mapa/el paso roto.jpeg",
+      "optimized": "images/el-paso-roto.webp",
+      "format": "JPEG",
+      "width": 1200,
+      "height": 896,
+      "originalBytes": 257998,
+      "optimizedBytes": 235978,
+      "quality": 80,
+      "sha256Original": "52cabaeb82463f90f6be91f74dbf5b081f718a29fd3fe5cd5413ee73587d2df8",
+      "sha256Pixels": "1cdcfbb95911675a8c265a6e60f50d9bc24f799d36c27df99bda4364c2ef8730",
+      "backup": "originales-locales/world-20261106-105559/originals/el paso roto.jpeg",
+      "variants": [
+        {
+          "file": "el-paso-roto-768.webp",
+          "width": 768,
+          "height": 573,
+          "bytes": 130102
+        },
+        {
+          "file": "el-paso-roto-240.webp",
+          "width": 240,
+          "height": 179,
+          "bytes": 13032
+        }
+      ],
+      "reductionPercent": 8.53
+    },
+    {
+      "original": "images/niveles del mapa/guarida del gran alfa.jpeg",
+      "optimized": "images/guarida-del-gran-alfa.webp",
+      "format": "JPEG",
+      "width": 1200,
+      "height": 896,
+      "originalBytes": 221729,
+      "optimizedBytes": 213766,
+      "quality": 83,
+      "sha256Original": "b80cad1d3e6513103e7c4e4e5be217e8b9f5edf5142832699ed3801e7fbec047",
+      "sha256Pixels": "052e3117a02dc6c0b6b61f7dca3034af8a00ac2681aefafe219d471a33093686",
+      "backup": "originales-locales/world-20261106-105559/originals/guarida del gran alfa.jpeg",
+      "variants": [
+        {
+          "file": "guarida-del-gran-alfa-768.webp",
+          "width": 768,
+          "height": 573,
+          "bytes": 107064
+        },
+        {
+          "file": "guarida-del-gran-alfa-240.webp",
+          "width": 240,
+          "height": 179,
+          "bytes": 10090
+        }
+      ],
+      "reductionPercent": 3.59
+    }
+  ]
+}
