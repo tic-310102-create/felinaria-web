@@ -16,7 +16,7 @@ ZOOM_CASES = [(1440, 1.25), (1440, 1.5), (1440, 2), (1920, 2), (3840, 2)]
 GROUPS = {
     'rewards': ('.recompensas .recompensa', '.recompensa__nombre', '.recompensa__lamina img'),
     'levels': ('.levels-grid .level-card', '.level-card__body h4', '.level-card__media img'),
-    'characters': ('.personajes .tarjeta-personaje', '.tarjeta-personaje__nombre', '.tarjeta-personaje__retrato img, .tarjeta-personaje__galeria img'),
+    'characters': ('.personajes .tarjeta-personaje', '.tarjeta-personaje__nombre', '.tarjeta-personaje__retrato img, .tarjeta-personaje__slide'),
     'mechanics': ('.mecanicas .mecanica:not(.mecanica--creacion)', '.mecanica__texto h3', '.mecanica__captura img'),
     'downloads': ('.descargables .descargables__tarjeta', '.descargables__cabecera h3', '.descargables__icono'),
 }
@@ -132,8 +132,9 @@ def check_layout(page, language, width):
     for card in page.locator('.level-card').all():
         assert card.locator('.level-card__media img').evaluate('i=>getComputedStyle(i).objectFit') == ('contain' if width <= 700 else 'cover')
     for card in page.locator('.tarjeta-personaje').all():
-        image = card.locator('.tarjeta-personaje__retrato img, .tarjeta-personaje__galeria img')
-        assert image.evaluate('i=>getComputedStyle(i).objectFit') == 'contain'
+        images = card.locator('.tarjeta-personaje__retrato img, .tarjeta-personaje__slide')
+        assert images.count() > 0
+        assert images.evaluate_all('images=>images.every(image=>getComputedStyle(image).objectFit === "contain")')
     for card in page.locator('.mecanica:not(.mecanica--creacion)').all():
         assert card.locator('.mecanica__captura img').evaluate('i=>getComputedStyle(i).objectFit') == 'contain'
     creation = page.locator('.mecanica--creacion')
@@ -174,7 +175,7 @@ def run(audit, screenshots):
                     print(f'{language.upper()} {width}px: equal cards, contained artwork, legible text, no overflow OK', flush=True)
                 if screenshots and width in [390, 1024, 1440, 2560]:
                     for selector, name in [('#recompensas', 'rewards'), ('#personajes', 'characters'), ('#mecanicas', 'mechanics'), ('.atlas-levels', 'levels')]:
-                        for image in page.locator(selector+' img:visible').all():
+                        for image in page.locator(selector+' img:not([aria-hidden="true"]):visible').all():
                             image.scroll_into_view_if_needed()
                             decoded(image)
                         page.locator(selector).screenshot(path=str(out / f'{"baseline" if audit else "final"}-{language}-{width}-{name}.png'),

@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 WIDTHS = [320, 360, 375, 390, 414, 430, 600, 768, 820, 900, 1024, 1280, 1366, 1440, 1536, 1600, 1920, 2560, 3840]
 NAV_LINKS = [('home','#inicio'),('story','#historia'),('characters','#personajes'),('world','#galeria'),('niveles','#mundo-lugares'),('mechanics','#mecanicas'),('rewards','#recompensas'),('controls','#controles'),('downloads','#descargables'),('team','#equipo')]
 REWARD_KEYS = ['sword','morality','potion']
-OVERFLOW = '''() => ({page:document.documentElement.scrollWidth>innerWidth+1, internal:[...document.querySelectorAll('body *')].filter(e=>e.clientWidth>0&&e.getClientRects().length&&getComputedStyle(e).visibility!=='hidden'&&e.scrollWidth>e.clientWidth+2&&!['auto','scroll','hidden'].includes(getComputedStyle(e).overflowX)).map(e=>e.tagName+'.'+e.className)})'''
+OVERFLOW = '''() => ({page:document.documentElement.scrollWidth>innerWidth+1, internal:[...document.querySelectorAll('body *')].filter(e=>e.clientWidth>0&&e.getClientRects().length&&getComputedStyle(e).visibility!=='hidden'&&e.scrollWidth>e.clientWidth+2&&!['auto','scroll','hidden'].includes(getComputedStyle(e).overflowX)&&!e.classList.contains('tarjeta-personaje__pista')).map(e=>e.tagName+'.'+e.className)})'''
 
 def switch(page, code):
     if page.locator('html').get_attribute('lang') == code:
@@ -263,6 +263,7 @@ def run(base, out):
         for id in ['tutorialPwa','tutorialApk']:
             page.locator(f'button[aria-controls={id}]').click(); assert page.locator('#'+id).is_visible()
         page.locator('.creacion__variantes button').nth(2).click()
+        page.locator('.tarjeta-personaje__puntos button').first.click()
         opener=page.locator('.tarjeta-personaje__galeria'); opener.click(); page.keyboard.press('ArrowRight')
         assert page.locator('.galeria-personajes__contador').inner_text()=='2 / 4'
         switch(page,'es'); assert page.locator('.galeria-personajes__contador').inner_text()=='2 / 4'

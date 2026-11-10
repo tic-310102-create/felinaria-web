@@ -1,8 +1,8 @@
 {
   "subpath": "/atlas/",
   "baselineCache": "felinaria-d45e744104f2941a",
-  "currentCache": "felinaria-644c217c9e0be4e0",
-  "cachedWebP": 45,
+  "currentCache": "felinaria-d956e268a32b9ab3",
+  "cachedWebP": 47,
   "baselineClientArtworkOffline": true,
   "warmClientAutoUpdated": true,
   "mapOffline": true,
@@ -18,6 +18,6 @@
   "installability": {
     "installabilityErrors": []
   },
-  "serviceWorkerImageResponses": 39,
+  "serviceWorkerImageResponses": 40,
   "consoleErrors": []
 }

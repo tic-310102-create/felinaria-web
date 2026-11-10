@@ -1,0 +1,16 @@
+[
+  {
+    "original": "images/aprendiz5.png",
+    "optimized": "images/aprendiz5.webp",
+    "format": "PNG",
+    "width": 1087,
+    "height": 1447,
+    "originalBytes": 1233993,
+    "optimizedBytes": 164072,
+    "quality": 86,
+    "transparent": true,
+    "sha256Original": "64e1d2e0647a80f5b7d10338696c76d7968f9035f1d1dfc9f28aad865821c2c4",
+    "backup": "originales-locales/characters-20261109-230550/images/aprendiz5.png",
+    "reductionPercent": 86.7
+  }
+]

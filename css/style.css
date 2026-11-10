@@ -311,6 +311,7 @@ a {
 .hero__ficha {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 0.7rem;
   justify-content: flex-start;
 }
@@ -323,6 +324,25 @@ a {
   border: 1px solid var(--linea);
   background: rgba(38, 32, 22, 0.45);
   padding: 0.42rem 1rem;
+}
+
+.ficha--rating {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  border-radius: 2px;
+  background: #fff;
+  line-height: 0;
+  overflow: hidden;
+  box-shadow: 0 10px 24px -14px rgba(9, 7, 5, 0.95);
+}
+
+.ficha--rating img {
+  display: block;
+  width: auto;
+  height: clamp(4rem, 6vw, 6.5rem);
 }
 
 /* portada en móvil: texto legible sobre el paisaje */
@@ -345,6 +365,21 @@ a {
     max-width: 34ch;
   }
 
+}
+
+@media (min-width: 672px) {
+  .hero__ficha {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: start;
+    column-gap: 0.7rem;
+    row-gap: 0.55rem;
+  }
+
+  .hero__ficha .ficha--rating {
+    grid-row: span 2;
+  }
 }
 
 @media (max-width: 480px) {
@@ -513,7 +548,9 @@ a {
 .tarjeta-personaje {
   --acento: var(--color-oro-oscuro);
   --acento-claro: var(--color-oro-claro);
+  display: flex;
   flex: 0 1 calc((100% - 2 * var(--espacio-md)) / 3);
+  flex-direction: column;
   min-width: 0;
   background-color: var(--color-tinta-suave);
   background-image: radial-gradient(115% 55% at 50% 0%, color-mix(in srgb, var(--acento) 15%, transparent), transparent 65%);
@@ -549,11 +586,16 @@ a {
   .tarjeta-personaje__nombre {
     min-height: 2.5em;
   }
+
+  .tarjeta-personaje__rol {
+    min-height: calc(2.8em + 1rem + 1px);
+  }
 }
 
 .tarjeta-personaje__rol {
   font-family: var(--fuente-titulos);
   font-size: 0.8rem;
+  line-height: 1.4;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--acento-claro);
@@ -563,44 +605,241 @@ a {
 }
 
 .tarjeta-personaje__descripcion {
+  flex: 1 1 auto;
   font-size: 1.1rem;
   line-height: 1.6;
   color: var(--color-pergamino-tenue);
 }
 
 .tarjeta-personaje__retrato,
-.tarjeta-personaje__galeria {
+.tarjeta-personaje__carrusel {
   position: relative;
-  display: block;
-  width: auto;
   margin: 0 -1.6rem 1.4rem;
-  padding: 0;
-  border: none;
   border-bottom: 1px solid var(--linea);
   background: var(--color-tinta);
+}
+
+.tarjeta-personaje__retrato {
+  display: block;
   overflow: hidden;
 }
 
-.tarjeta-personaje__retrato img,
-.tarjeta-personaje__galeria img {
+.tarjeta-personaje__retrato img {
   display: block;
   width: 100%;
   height: auto;
   aspect-ratio: 3 / 4;
   object-fit: contain;
-  object-position: top center;
+  object-position: center;
+}
+
+.tarjeta-personaje__carrusel {
+  aspect-ratio: 3 / 4;
 }
 
 .tarjeta-personaje__galeria {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: var(--color-tinta);
+  color: inherit;
+  overflow: hidden;
   cursor: pointer;
 }
 
-.tarjeta-personaje__galeria img {
-  transition: transform 0.35s ease;
+.tarjeta-personaje__galeria:focus-visible {
+  outline: 2px solid var(--color-oro-claro);
+  outline-offset: -2px;
 }
 
-.tarjeta-personaje__galeria:hover img {
-  transform: scale(1.03);
+.tarjeta-personaje__pista {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.38s ease;
+  will-change: transform;
+}
+
+.tarjeta-personaje__slide {
+  flex: 0 0 100%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.tarjeta-personaje__flecha {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1px solid var(--linea-oro);
+  border-radius: 50%;
+  background: rgba(21, 18, 13, 0.82);
+  color: var(--color-oro-claro);
+  font-family: var(--fuente-titulos);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  touch-action: manipulation;
+  transform: translateY(-50%);
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.tarjeta-personaje__flecha:hover,
+.tarjeta-personaje__flecha:focus-visible {
+  border-color: var(--color-oro-claro);
+  background: rgba(21, 18, 13, 0.96);
+  color: var(--color-pergamino);
+}
+
+.tarjeta-personaje__flecha:focus-visible,
+.tarjeta-personaje__puntos button:focus-visible,
+.tarjeta-personaje__autoplay:focus-visible {
+  outline: 2px solid var(--color-oro-claro);
+  outline-offset: 2px;
+}
+
+.tarjeta-personaje__flecha--anterior {
+  left: 0.6rem;
+}
+
+.tarjeta-personaje__flecha--siguiente {
+  right: 0.6rem;
+}
+
+.tarjeta-personaje__carrusel-pie {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 3.2rem;
+  padding: 1.8rem 0.7rem 0.5rem;
+  background: linear-gradient(rgba(21, 18, 13, 0), rgba(21, 18, 13, 0.94) 60%);
+  pointer-events: none;
+}
+
+.tarjeta-personaje__carrusel-pie > * {
+  pointer-events: auto;
+}
+
+.tarjeta-personaje__apariencia {
+  margin: 0;
+  font-family: var(--fuente-titulos);
+  font-size: 0.72rem;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--color-oro-claro);
+}
+
+.tarjeta-personaje__puntos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tarjeta-personaje__puntos button {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.tarjeta-personaje__puntos button::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 1px solid var(--color-oro-claro);
+  border-radius: 50%;
+  background: transparent;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.tarjeta-personaje__puntos button[aria-pressed="true"]::before {
+  background: var(--color-oro-claro);
+  transform: scale(1.2);
+}
+
+.tarjeta-personaje__autoplay {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  justify-self: end;
+  gap: 0.4rem;
+  padding: 0.55rem 0.2rem;
+  border: 0;
+  border-radius: 2px;
+  background: none;
+  color: var(--color-pergamino-tenue);
+  font-family: var(--fuente-titulos);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.tarjeta-personaje__cuenta {
+  justify-self: end;
+  color: inherit;
+}
+
+.tarjeta-personaje__autoplay-icono {
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+  width: 9px;
+  height: 10px;
+  color: var(--color-oro-claro);
+}
+
+.tarjeta-personaje__autoplay-icono.es-pausa::before,
+.tarjeta-personaje__autoplay-icono.es-pausa::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: currentColor;
+}
+
+.tarjeta-personaje__autoplay-icono.es-pausa::before {
+  left: 0;
+}
+
+.tarjeta-personaje__autoplay-icono.es-pausa::after {
+  right: 0;
+}
+
+.tarjeta-personaje__autoplay-icono.es-play {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 8px solid currentColor;
+}
+
+.tarjeta-personaje__autoplay:hover .tarjeta-personaje__autoplay-icono,
+.tarjeta-personaje__autoplay:focus-visible .tarjeta-personaje__autoplay-icono {
+  color: var(--color-pergamino);
 }
 
 @media (max-width: 1000px) {
@@ -611,27 +850,44 @@ a {
 
 @media (min-width: 672px) {
   .tarjeta-personaje__retrato,
-  .tarjeta-personaje__galeria {
+  .tarjeta-personaje__carrusel {
     height: clamp(20rem, 27vw, 24rem);
+    aspect-ratio: auto;
   }
 
-  .tarjeta-personaje__retrato img,
-  .tarjeta-personaje__galeria img {
+  .tarjeta-personaje__retrato img {
     height: 100%;
     aspect-ratio: auto;
   }
 }
 
-.tarjeta-personaje__galeria-aviso {
-  position: absolute;
-  inset: auto 0 0 0;
-  padding: 1.4rem 0.75rem 0.55rem;
-  background: linear-gradient(rgba(21, 18, 13, 0), rgba(21, 18, 13, 0.92) 45%);
-  color: var(--color-oro-claro);
-  font-family: var(--fuente-titulos);
-  font-size: 0.8rem;
-  letter-spacing: 0.06em;
-  text-align: center;
+@media (max-width: 360px) {
+  .tarjeta-personaje__carrusel-pie {
+    gap: 0.3rem;
+    padding-inline: 0.6rem;
+  }
+
+  .tarjeta-personaje__puntos button {
+    width: 2.125rem;
+    height: 2.125rem;
+  }
+
+  .tarjeta-personaje__apariencia,
+  .tarjeta-personaje__autoplay {
+    font-size: 0.68rem;
+  }
+
+  .tarjeta-personaje__autoplay {
+    gap: 0.3rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tarjeta-personaje__pista,
+  .tarjeta-personaje__flecha,
+  .tarjeta-personaje__puntos button::before {
+    transition: none;
+  }
 }
 
 /* ---------- Recompensas: tres folios iguales con arte de distinta orientación ---------- */
@@ -1986,7 +2242,7 @@ a {
   }
 
   .tarjeta-personaje__retrato,
-  .tarjeta-personaje__galeria {
+  .tarjeta-personaje__carrusel {
     margin-inline: calc(-1 * clamp(1rem, 4vw, 1.6rem));
   }
 

@@ -3,7 +3,9 @@ import { apkConfig } from './descargables.js';
 import { useLanguage } from './i18n/useLanguage.js';
 import iconoFelinaria from '../images/icono_felinaria.webp';
 import { Imagen, SelectorIdioma } from './components/SiteMedia.jsx';
+import ApprenticeCarousel from './components/ApprenticeCarousel.jsx';
 import WorldExploration from './components/WorldExploration.jsx';
+import { COATS as apariencias, APPRENTICE_IMAGES as imagenesAprendiz } from './apprentice.js';
 
 const capturasDisponibles = new Set(__CONTROLES_IMAGENES__);
 // Physical keys and bindings are independent of the interface language.
@@ -24,8 +26,6 @@ const controles = [
     { id: 'advance', teclas: ['Space', 'Enter', 'E'] }, { id: 'answer', teclas: ['1', '2', '3'] },
   ] },
 ];
-const apariencias = ['white', 'gray', 'black', 'siamese'];
-const imagenesAprendiz = ['aprendiz1.webp', 'aprendiz2.webp', 'aprendiz3.webp', 'aprendiz4.webp'];
 const personajes = [
   ['apprentice', 'aprendiz1.webp'], ['rastrojo', 'rastrojo.webp'], ['rosa', 'rosa.webp'],
   ['mentor', 'maestro.webp'], ['pack', 'perros-salvajes.webp'],
@@ -229,7 +229,7 @@ export default function App() {
             <p className="hero__omen">{c.hero.omen}</p>
             <p className="hero__subtitulo">{c.hero.subtitle}</p>
             <div className="hero__ficha">
-              <span className="ficha">{c.hero.rating}</span><span className="ficha">{c.hero.genre}</span><span className="ficha">{c.hero.combat}</span>
+              <span className="ficha ficha--rating"><Imagen archivo="E10+.webp" alt={c.hero.rating} loading="eager" /></span><span className="ficha">{c.hero.genre}</span><span className="ficha">{c.hero.combat}</span>
             </div>
           </div>
         </section>
@@ -260,10 +260,7 @@ export default function App() {
           <div className="seccion__cabecera"><p className="seccion__numero">{c.characters.label}</p><h2 className="seccion__titulo">{c.characters.title}</h2></div>
           <div className="personajes">
             {personajes.map(([key, archivo]) => <article className="tarjeta-personaje" key={key}>
-              {key === 'apprentice' ? <button type="button" className="tarjeta-personaje__galeria" aria-label={t('characters.viewGallery', { count: imagenesAprendiz.length })} onClick={(evento) => { retornoFocoRef.current = evento.currentTarget; setGaleriaIndice(0); setGaleriaAbierta(true); }}>
-                <Imagen archivo={archivo} alt={t('mechanics.appearanceAlt', { coat: c.mechanics.coats.white })} />
-                <span className="tarjeta-personaje__galeria-aviso" aria-hidden="true">{t('characters.galleryHint', { count: imagenesAprendiz.length })}</span>
-              </button> : <div className="tarjeta-personaje__retrato"><Imagen archivo={archivo} alt={c.characters[key].alt} /></div>}
+              {key === 'apprentice' ? <ApprenticeCarousel images={imagenesAprendiz} c={c} t={t} suspended={galeriaAbierta} onOpen={(indice, evento) => { retornoFocoRef.current = evento.currentTarget; setGaleriaIndice(indice); setGaleriaAbierta(true); }} /> : <div className="tarjeta-personaje__retrato"><Imagen archivo={archivo} alt={c.characters[key].alt} /></div>}
               <h3 className="tarjeta-personaje__nombre">{c.characters[key].name}</h3>
               <p className="tarjeta-personaje__rol">{c.characters[key].role}</p>
               <p className="tarjeta-personaje__descripcion">{c.characters[key].description}</p>

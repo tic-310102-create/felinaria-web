@@ -53,7 +53,7 @@ test('reward artwork exists and is registered with its real dimensions', () => {
     const row = report.find((item) => item.optimized === `images/${file}`);
     assert.ok(row, file);
     assert.deepEqual(dims, { width: row.width, height: row.height });
-    assert.ok(existsSync(new URL(row.original, root)), row.original);
+    assert.ok(!existsSync(new URL(row.original, root)), `${row.original} should be archived`);
     assert.match(row.backup, /^originales-locales\//);
     assert.ok(existsSync(new URL(row.backup, root)), row.backup);
   }
