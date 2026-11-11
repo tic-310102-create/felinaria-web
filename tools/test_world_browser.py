@@ -12,7 +12,7 @@ from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
 WIDTHS = [320, 360, 375, 390, 414, 430, 600, 768, 820, 900, 1024, 1280, 1366, 1440, 1536, 1600, 1920, 2560, 3840]
-NAV_LINKS = [('home','#inicio'),('story','#historia'),('characters','#personajes'),('world','#galeria'),('niveles','#mundo-lugares'),('mechanics','#mecanicas'),('rewards','#recompensas'),('controls','#controles'),('downloads','#descargables'),('team','#equipo')]
+NAV_LINKS = [('home','#inicio'),('story','#historia'),('characters','#personajes'),('world','#galeria'),('niveles','#mundo-lugares'),('mechanics','#mecanicas'),('rewards','#recompensas'),('controls','#controles'),('requirements','#requisitos'),('downloads','#descargables'),('team','#equipo')]
 REWARD_KEYS = ['sword','morality','potion']
 OVERFLOW = '''() => ({page:document.documentElement.scrollWidth>innerWidth+1, internal:[...document.querySelectorAll('body *')].filter(e=>e.clientWidth>0&&e.getClientRects().length&&getComputedStyle(e).visibility!=='hidden'&&e.scrollWidth>e.clientWidth+2&&!['auto','scroll','hidden'].includes(getComputedStyle(e).overflowX)&&!e.classList.contains('tarjeta-personaje__pista')).map(e=>e.tagName+'.'+e.className)})'''
 
@@ -49,7 +49,7 @@ def scan_reflow(page):
             page.set_viewport_size({'width':width,'height':900})
             geometry(page)
             check_map_layout(page,width)
-            if width >= 1241:
+            if width >= 1321:
                 rows=page.locator('.nav-principal ul').evaluate('e=>new Set([...e.children].map(li=>Math.round(li.getBoundingClientRect().y))).size')
                 assert rows==1,(code,width,rows)
             reading = page.locator('.atlas-map__reading').bounding_box()
@@ -102,7 +102,7 @@ def run(base, out):
         page.evaluate('document.fonts.ready')
         page.add_style_tag(content='html {scroll-behavior:auto !important}')
         assert page.locator('html').get_attribute('lang') == 'es'
-        assert page.locator('main > section').evaluate_all('sections=>sections.map(section=>section.id)') == ['inicio','historia','personajes','galeria','mecanicas','recompensas','controles','descargables']
+        assert page.locator('main > section').evaluate_all('sections=>sections.map(section=>section.id)') == ['inicio','historia','personajes','galeria','mecanicas','recompensas','controles','requisitos','descargables','equipo']
         assert page.locator('#galeria').count() == 1
         # The four-region presentation is retired: no section, cards, legend or dead links.
         assert page.locator('#mundo-regiones').count() == 0
@@ -115,8 +115,13 @@ def run(base, out):
         assert page.locator('.level-card').count() == 8
         # Retired copy is gone: chronicle label, caption and technical illustration note.
         assert page.locator('.atlas-map__tagline, .atlas-map__caption, .atlas-map__note, .world-viewer__note').count() == 0
-        assert page.locator('#navPrincipal a').count() == 10
+        assert page.locator('#navPrincipal a').count() == 11
         assert page.locator('#recompensas .recompensa').count() == 3
+        assert page.locator('#requisitos .requisitos__dato').count() == 6
+        assert page.locator('#requisitos .requisitos__panel').count() == 2
+        assert page.locator('#requisitos .requisitos__fila').count() == 14
+        assert page.locator('#equipo .equipo__tarjeta').count() == 6
+        assert page.locator('#equipo .equipo__nombre').all_inner_texts() == [copies['es']['team']['members'][key]['name'] for key in ['aldair','brandon','diana','gilberto','jose-carlos','sherlyn']]
         assert page.locator('.mecanica').count() == 5
         assert page.locator('.tarjeta-personaje').count() == 5
 
@@ -135,7 +140,7 @@ def run(base, out):
                     page.keyboard.press('Escape')
                 assert page.evaluate('innerWidth===visualViewport.width && visualViewport.scale===1 && devicePixelRatio===1')
                 if width in [390,1440]:
-                    for selector,label in [('#inicio','hero'),('#historia','story'),('#personajes','characters'),('#recompensas','rewards')]:
+                    for selector,label in [('#inicio','hero'),('#historia','story'),('#personajes','characters'),('#recompensas','rewards'),('#requisitos','requirements'),('#equipo','team')]:
                         for image in page.locator(selector+' img:visible').all():
                             if label != 'hero':
                                 image.scroll_into_view_if_needed()
@@ -152,13 +157,24 @@ def run(base, out):
                 image = page.locator('.atlas-map__open img')
                 assert image.evaluate('i=>i.getBoundingClientRect().width<=i.naturalWidth+1')
                 assert image.evaluate('i=>Math.abs(i.width/i.height-i.naturalWidth/i.naturalHeight)<.01')
-                if width <= 1240:
+                if width <= 1320:
                     toggle=page.locator('#botonMenu')
                     toggle.focus(); page.keyboard.press('Enter')
                     assert toggle.get_attribute('aria-expanded')=='true'
+                    page.wait_for_timeout(320)
+                    nav=page.locator('#navPrincipal'); overlay=page.locator('.menu-fondo')
+                    box=nav.bounding_box(); expected=min(width/2,352)
+                    assert box and abs(box['x'])<2 and abs(box['width']-expected)<=1
+                    assert nav.is_visible() and overlay.is_visible()
+                    assert nav.evaluate("e=>getComputedStyle(e).backgroundColor")=='rgba(21, 18, 13, 0.78)'
+                    assert overlay.evaluate("e=>getComputedStyle(e).backgroundColor")=='rgba(0, 0, 0, 0.6)'
+                    assert page.evaluate("getComputedStyle(document.body).overflow")=='hidden'
                     page.locator(f'#navPrincipal button[lang={code}]').scroll_into_view_if_needed()
                     page.keyboard.press('Escape')
                     assert toggle.evaluate('e=>e===document.activeElement')
+                    page.wait_for_timeout(320)
+                    assert not nav.is_visible()
+                    assert page.evaluate("getComputedStyle(document.body).overflow")!='hidden'
 
                 opener=page.locator('.atlas-map__open')
                 opener.click()
@@ -309,6 +325,10 @@ def run(base, out):
         # Real touch events: all actions are independent of hover.
         touch=browser.new_context(viewport={'width':390,'height':844},device_scale_factor=1,has_touch=True,is_mobile=True)
         tp=touch.new_page(); tp.goto(base,wait_until='networkidle')
+        tp.locator('#botonMenu').tap(); tp.locator('.menu-fondo').wait_for(state='visible')
+        tp.touchscreen.tap(380,700)
+        assert tp.locator('#botonMenu').get_attribute('aria-expanded')=='false'
+        tp.wait_for_timeout(320)
         tp.locator('#botonMenu').tap(); tp.locator('#navPrincipal a[href="#galeria"]').tap()
         tp.locator('.atlas-map__open').tap(); tp.locator('.world-viewer .world-viewer__bar > button').tap()
         tp.locator('#nivel-3 .level-card__media').tap()

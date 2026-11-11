@@ -4,6 +4,8 @@ import { useLanguage } from './i18n/useLanguage.js';
 import iconoFelinaria from '../images/icono_felinaria.webp';
 import { Imagen, SelectorIdioma } from './components/SiteMedia.jsx';
 import ApprenticeCarousel from './components/ApprenticeCarousel.jsx';
+import DevelopmentTeam from './components/DevelopmentTeam.jsx';
+import SystemRequirements from './components/SystemRequirements.jsx';
 import WorldExploration from './components/WorldExploration.jsx';
 import { COATS as apariencias, APPRENTICE_IMAGES as imagenesAprendiz } from './apprentice.js';
 
@@ -42,7 +44,7 @@ const laminasCronica = {
 };
 const enlaces = [
   ['home', 'inicio'], ['story', 'historia'], ['characters', 'personajes'], ['world', 'galeria'], ['niveles', 'mundo-lugares'],
-  ['mechanics', 'mecanicas'], ['rewards', 'recompensas'], ['controls', 'controles'], ['downloads', 'descargables'], ['team', 'equipo'],
+  ['mechanics', 'mecanicas'], ['rewards', 'recompensas'], ['controls', 'controles'], ['requirements', 'requisitos'], ['downloads', 'descargables'], ['team', 'equipo'],
 ];
 
 // Only documented key tokens are rendered as HTML; translations never inject HTML.
@@ -98,22 +100,31 @@ export default function App() {
         botonMenuRef.current?.focus();
       }
     };
-    document.addEventListener('pointerdown', cerrarFuera);
+    document.addEventListener('click', cerrarFuera);
     document.addEventListener('keydown', cerrarConEscape);
     return () => {
-      document.removeEventListener('pointerdown', cerrarFuera);
+      document.removeEventListener('click', cerrarFuera);
       document.removeEventListener('keydown', cerrarConEscape);
     };
   }, [menuAbierto]);
 
   useEffect(() => {
-    const tamanoEscritorio = window.matchMedia('(min-width: 1241px)');
+    const tamanoEscritorio = window.matchMedia('(min-width: 1321px)');
     const cerrarEnEscritorio = () => {
       if (tamanoEscritorio.matches) setMenuAbierto(false);
     };
     tamanoEscritorio.addEventListener('change', cerrarEnEscritorio);
     return () => tamanoEscritorio.removeEventListener('change', cerrarEnEscritorio);
   }, []);
+
+  useEffect(() => {
+    if (!menuAbierto || !window.matchMedia('(max-width: 1320px)').matches) return;
+    const overflowAnterior = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = overflowAnterior;
+    };
+  }, [menuAbierto]);
 
   useEffect(() => {
     if (imagenAmpliada === null) return;
@@ -202,7 +213,7 @@ export default function App() {
 
   return (
     <>
-      <header className="cabecera" ref={cabeceraRef}>
+      <header className={`cabecera${menuAbierto ? ' cabecera--menu-abierto' : ''}`} ref={cabeceraRef}>
         <div className="cabecera__interior">
           <a href="#inicio" className="marca" onClick={() => setMenuAbierto(false)}>
             <Imagen archivo="icono_felinaria.webp" src={iconoFelinaria} alt="" width="32" height="32" loading="eager" />
@@ -217,6 +228,13 @@ export default function App() {
           </nav>
         </div>
       </header>
+      <button
+        className={`menu-fondo${menuAbierto ? ' visible' : ''}`}
+        type="button"
+        tabIndex={-1}
+        aria-label={c.nav.close}
+        onClick={() => setMenuAbierto(false)}
+      />
 
       <main>
         <section id="inicio" className="hero">
@@ -368,6 +386,8 @@ export default function App() {
           </div>
         </section>
 
+        <SystemRequirements copy={c.requirements} />
+
         <section id="descargables" className="seccion">
           <div className="seccion__cabecera"><p className="seccion__numero">{c.downloads.label}</p><h2 className="seccion__titulo">{c.downloads.title}</h2><p className="seccion__texto">{c.downloads.subtitle}</p></div>
           <div className="descargables">
@@ -406,11 +426,12 @@ export default function App() {
             </article>
           </div>
         </section>
+
+        <DevelopmentTeam copy={c.team} />
       </main>
 
-      <footer className="pie" id="equipo">
-        <h2 className="pie__institucion">{c.team.title}</h2>
-        <ul className="pie__equipo"><li>Bernal Arias Diana Laura</li><li>Topete Sánchez José Carlos</li><li>Ramos Díaz Aldair Alejandro</li><li>Rosales García Sherlyn Vanessa</li><li>Bernal Hernández Brandon Eduardo</li><li>Mendoza Salas Gilberto Alonso</li></ul>
+      <footer className="pie">
+        <h2 className="pie__institucion">{c.team.label}</h2>
         <p>{c.team.copyright}</p>
       </footer>
       <div className="aviso-sin-conexion" role="status" hidden={!sinConexion}>{c.status.offline}</div>

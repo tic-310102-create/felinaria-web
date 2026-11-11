@@ -4,7 +4,7 @@
     "description": "Felinaria: a narrative adventure with RPG elements, exploration, moral choices and action combat in a world of feline colonies."
   },
   "language": {"label": "Website language", "es": "Switch to Spanish", "en": "Switch to English"},
-  "nav": {"home": "Home", "story": "Story", "characters": "Characters", "world": "World", "niveles": "Levels", "mechanics": "Mechanics", "rewards": "Rewards", "controls": "Controls", "downloads": "Downloads", "team": "Team", "label": "Main navigation", "menu": "Menu", "open": "Open navigation menu", "close": "Close navigation menu"},
+  "nav": {"home": "Home", "story": "Story", "characters": "Characters", "world": "World", "niveles": "Levels", "mechanics": "Mechanics", "rewards": "Rewards", "controls": "Controls", "requirements": "Requirements", "downloads": "Downloads", "team": "Team", "label": "Main navigation", "menu": "Menu", "open": "Open navigation menu", "close": "Close navigation menu"},
   "common": {"close": "Close", "previous": "Previous image", "next": "Next image", "enlarge": "Enlarge image: {title}", "imageOf": "Image {index} of {count}", "selectImage": "View image {index} of {count}", "imageAlt": "{title}, image {index} of {count}"},
   "hero": {
     "eyebrow": "Narrative adventure · Action RPG · 2D pixel art",
@@ -114,6 +114,33 @@
       "answer": {"name": "Choose a moral response", "alternative": "or click the corresponding option"}
     }
   },
+  "requirements": {
+    "label": "Requirements", "title": "System requirements", "subtitle": "Discover the hardware and software features needed to run Felinaria and enter its fantasy world.", "specsLabel": "Game fact sheet",
+    "specs": {
+      "name": {"label": "Name", "value": "Felinaria: The Last Omen"},
+      "genre": {"label": "Genre", "value": "Medieval fantasy adventure and RPG"},
+      "engine": {"label": "Engine", "value": "Unity 6 · 6000.3.25f1", "note": "Version verified in the Windows build."},
+      "size": {"label": "Download size", "value": "≈ 400 MB", "note": "Windows build size: 401,948,503 B (383 MiB)."},
+      "platforms": {"label": "Platforms", "value": "64-bit Windows", "note": "Verified build. There is no Android build of the game."},
+      "distribution": {"label": "Distribution", "value": "Standalone Windows folder", "note": "Felinaria.exe and game data; no installer."}
+    },
+    "minimumTitle": "Minimum requirements", "minimumEyebrow": "To run the Windows build",
+    "recommendedTitle": "Recommended requirements", "recommendedEyebrow": "For a stable experience",
+    "components": {"os": "Operating system", "cpu": "Processor", "ram": "Memory", "gpu": "Graphics card", "storage": "Storage", "architecture": "Architecture", "internet": "Internet connection"},
+    "rows": {
+      "os": {"minimum": "Windows 10 21H1 (build 19043) or later, 64-bit.", "recommended": "Windows 11 or updated Windows 10 22H2, 64-bit."},
+      "cpu": {"minimum": "Intel Core i3-6100 / AMD FX-6300 (x86_64 with SSE2) or better.", "recommended": "Intel Core i5-8400 / AMD Ryzen 5 2600 or better."},
+      "ram": {"minimum": "4 GB RAM.", "recommended": "8 GB RAM."},
+      "gpu": {"minimum": "DirectX 12-compatible GPU (Intel UHD 630 / AMD Radeon Vega 8 or better) with at least 1 GB of available graphics memory.", "recommended": "DirectX 12-compatible GPU with 2 GB VRAM (NVIDIA GTX 1050 Ti / AMD RX 570 or better)."},
+      "storage": {"minimum": "1 GB free space; the build is 383 MiB.", "recommended": "2 GB free space."},
+      "architecture": {"minimum": "x86_64 (64-bit), verified in the Windows build.", "recommended": "x86_64 (64-bit)."},
+      "internet": {"minimum": "Not required to play in local guest mode. An account and cloud sync require a connection.", "recommended": "Broadband for account, Firebase and cloud synchronization."}
+    },
+    "statuses": {"verified": "Verified in project", "project": "Project technical baseline", "estimate": "Calculated from build"},
+    "minimumNote": "Technical reference for the Windows build based on Unity 6 and the project's content. It does not replace performance testing on each computer.",
+    "recommendedNote": "Guidance for a stable experience. CPU, RAM and GPU values are a conservative baseline, not a measurement of the build.",
+    "sourceNote": "Basis: Windows build, Unity 6 documentation and project code. The x86_64 architecture, DirectX 12, build size and local guest mode are verified. CPU, RAM and GPU minimums are a project technical reference, not a hardware benchmark."
+  },
   "downloads": {
     "label": "Downloads", "title": "Take Felinaria with you", "subtitle": "Explore Felinaria in your browser or download the app for Android.", "available": "Available", "development": "In development",
     "webType": "Installable website", "webName": "Felinaria Web", "webAlt": "Felinaria Web emblem", "webDescription": "Install Felinaria on your device and explore its stories, characters and core content, even offline after the initial load.", "webCompatibility": "For compatible browsers and devices. On iPhone and iPad, use your browser's sharing options.",
@@ -143,6 +170,21 @@
     },
     "viewer": {"zoomControls": "Illustration zoom controls", "zoomIn": "Zoom in", "zoomOut": "Zoom out", "zoomLevel": "Zoom level", "fit": "Fit", "panLabel": "Scrollable illustration; focus here and use the arrow keys to pan the enlarged image", "views": "Available views", "viewCount": "View {index} of {count}", "help": "Use the buttons to zoom, then pan inside the image with touch, the mouse or keyboard arrow keys. Escape closes the viewer. Zoom does not add detail to the original artwork."}
   },
-  "team": {"title": "Development team", "copyright": "© 2026 Felinaria."},
+  "team": {
+    "label": "Development team", "title": "THE TEAM BEHIND FELINARIA", "subtitle": "Six members, different specialties and one shared goal: bringing the world of Felinaria: The Last Omen to life.", "count": "6 members",
+    "groupLabels": {"product": "Product management", "narrative": "Narrative and conceptual design"},
+    "members": {
+      "aldair": {"name": "Aldair Alejandro Ramos Díaz", "role": "Android and Firebase Developer", "groups": {"responsibilities": ["Development of the native mobile app in Android Studio.", "Management of the Firebase database.", "Real-time synchronization and connection between the mobile app and the game."]}},
+      "brandon": {"name": "Brandon Eduardo Bernal Hernández", "role": "Web and PWA Developer", "groups": {"responsibilities": ["Development of the React web application.", "Implementation and configuration of the PWA.", "Adaptation for PWA installation and operation."]}},
+      "diana": {"name": "Diana Laura Bernal Arias", "role": "Product Owner and Conceptual & Narrative Designer", "groups": {
+        "product": ["Overall project vision.", "Product direction and coordination of deliveries between design and development."],
+        "narrative": ["Felinaria's story and map.", "Creation of Rastrojo and the black sword.", "Creation of Rosa and the dagger.", "Design of five coat variants for the protagonist.", "Creation of the Colmillo Colony's dog enemies."]
+      }},
+      "gilberto": {"name": "Gilberto Alonso Mendoza Salas", "role": "Conceptual Designer of Characters and Items", "groups": {"responsibilities": ["Creation of the master Lord of the Ravens.", "Design of the special items.", "Design of the healing potion.", "Development of character animations in the game."]}},
+      "jose-carlos": {"name": "José Carlos Topete Sánchez", "role": "Unity Game Developer", "groups": {"responsibilities": ["Development of the game in Unity.", "Implementation of the RPG.", "Development of the eight levels.", "Programming of the core mechanics."]}},
+      "sherlyn": {"name": "Sherlyn Vanessa Rosales García", "role": "UI/UX Designer", "groups": {"responsibilities": ["User interface design for the mobile app.", "User experience design for the mobile app.", "User interface design for the web platform.", "User experience design for the web platform."]}}
+    },
+    "copyright": "© 2026 Felinaria."
+  },
   "status": {"offline": "Offline · content available without Internet", "workerError": "The offline application could not be registered:"}
 }

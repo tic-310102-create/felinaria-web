@@ -4,7 +4,7 @@
     "description": "Felinaria: aventura narrativa con elementos RPG, exploración, decisiones morales y combate de acción en un mundo de colonias felinas."
   },
   "language": {"label": "Idioma del sitio", "es": "Cambiar a español", "en": "Cambiar a inglés"},
-  "nav": {"home": "Inicio", "story": "Historia", "characters": "Personajes", "world": "Mundo", "niveles": "Niveles", "mechanics": "Mecánicas", "rewards": "Recompensas", "controls": "Controles", "downloads": "Descargables", "team": "Equipo", "label": "Navegación principal", "menu": "Menú", "open": "Abrir menú de navegación", "close": "Cerrar menú de navegación"},
+  "nav": {"home": "Inicio", "story": "Historia", "characters": "Personajes", "world": "Mundo", "niveles": "Niveles", "mechanics": "Mecánicas", "rewards": "Recompensas", "controls": "Controles", "requirements": "Requisitos", "downloads": "Descargables", "team": "Equipo", "label": "Navegación principal", "menu": "Menú", "open": "Abrir menú de navegación", "close": "Cerrar menú de navegación"},
   "common": {"close": "Cerrar", "previous": "Imagen anterior", "next": "Imagen siguiente", "enlarge": "Ampliar imagen de {title}", "imageOf": "Imagen {index} de {count}", "selectImage": "Ver imagen {index} de {count}", "imageAlt": "{title}, imagen {index} de {count}"},
   "hero": {
     "eyebrow": "Aventura narrativa · RPG de acción · pixelart 2D",
@@ -114,6 +114,33 @@
       "answer": {"name": "Elegir respuestas morales", "alternative": "o clic sobre la opción correspondiente"}
     }
   },
+  "requirements": {
+    "label": "Requisitos", "title": "Requisitos del sistema", "subtitle": "Descubre las características de hardware y software necesarias para ejecutar Felinaria y adentrarte en su mundo de fantasía.", "specsLabel": "Ficha técnica del videojuego",
+    "specs": {
+      "name": {"label": "Nombre", "value": "Felinaria: El Último Presagio"},
+      "genre": {"label": "Género", "value": "Aventura y RPG de fantasía medieval"},
+      "engine": {"label": "Motor", "value": "Unity 6 · 6000.3.25f1", "note": "Versión comprobada en la build de Windows."},
+      "size": {"label": "Tamaño de descarga", "value": "≈ 400 MB", "note": "Tamaño de la build de Windows: 401.948.503 B (383 MiB)."},
+      "platforms": {"label": "Plataformas", "value": "Windows de 64 bits", "note": "Build verificada. No existe una build Android del videojuego."},
+      "distribution": {"label": "Distribución", "value": "Carpeta independiente para Windows", "note": "Felinaria.exe y datos del juego; sin instalador."}
+    },
+    "minimumTitle": "Requisitos mínimos", "minimumEyebrow": "Para ejecutar la build de Windows",
+    "recommendedTitle": "Requisitos recomendados", "recommendedEyebrow": "Para una experiencia estable",
+    "components": {"os": "Sistema operativo", "cpu": "Procesador", "ram": "Memoria RAM", "gpu": "Tarjeta gráfica", "storage": "Almacenamiento", "architecture": "Arquitectura", "internet": "Conexión a Internet"},
+    "rows": {
+      "os": {"minimum": "Windows 10 21H1 (build 19043) o superior, de 64 bits.", "recommended": "Windows 11 o Windows 10 22H2 actualizado, de 64 bits."},
+      "cpu": {"minimum": "Intel Core i3-6100 / AMD FX-6300 (x86_64 con SSE2) o superior.", "recommended": "Intel Core i5-8400 / AMD Ryzen 5 2600 o superior."},
+      "ram": {"minimum": "4 GB de RAM.", "recommended": "8 GB de RAM."},
+      "gpu": {"minimum": "GPU compatible con DirectX 12 (Intel UHD 630 / AMD Radeon Vega 8 o superior), con al menos 1 GB de memoria gráfica disponible.", "recommended": "GPU compatible con DirectX 12 y 2 GB de VRAM (NVIDIA GTX 1050 Ti / AMD RX 570 o superior)."},
+      "storage": {"minimum": "1 GB de espacio libre; la build ocupa 383 MiB.", "recommended": "2 GB de espacio libre."},
+      "architecture": {"minimum": "x86_64 (64 bits), comprobado en la build de Windows.", "recommended": "x86_64 (64 bits)."},
+      "internet": {"minimum": "No se necesita para jugar en modo invitado local. Cuenta y sincronización en la nube requieren conexión.", "recommended": "Banda ancha para cuenta, Firebase y sincronización en la nube."}
+    },
+    "statuses": {"verified": "Comprobado en el proyecto", "project": "Base técnica del proyecto", "estimate": "Calculado sobre la build"},
+    "minimumNote": "Referencia técnica para la build de Windows basada en Unity 6 y en el contenido del proyecto. No sustituye una prueba de rendimiento en cada equipo.",
+    "recommendedNote": "Configuración orientativa para una experiencia estable. Los valores de CPU, RAM y GPU son una base conservadora, no una medición de la build.",
+    "sourceNote": "Base: build de Windows, documentación de Unity 6 y código del proyecto. La arquitectura x86_64, DirectX 12, el tamaño de la build y el modo invitado local están comprobados. Los mínimos de CPU, RAM y GPU son una referencia técnica del proyecto, no un benchmark de hardware."
+  },
   "downloads": {
     "label": "Descargables", "title": "Lleva Felinaria contigo", "subtitle": "Explora el universo de Felinaria desde tu navegador o descarga la aplicación para Android.", "available": "Disponible", "development": "En desarrollo",
     "webType": "Web instalable", "webName": "Felinaria Web", "webAlt": "Emblema de Felinaria Web", "webDescription": "Instala Felinaria en tu dispositivo y consulta sus historias, personajes y contenido principal incluso sin conexión, después de la carga inicial.", "webCompatibility": "Para navegadores y dispositivos compatibles. En iPhone y iPad, utiliza las opciones de compartir del navegador.",
@@ -143,6 +170,21 @@
     },
     "viewer": {"zoomControls": "Ampliación de la ilustración", "zoomIn": "Acercar imagen", "zoomOut": "Alejar imagen", "zoomLevel": "Nivel de ampliación", "fit": "Ajustar", "panLabel": "Ilustración desplazable; usa las flechas con el foco aquí para recorrer la imagen ampliada", "views": "Vistas disponibles", "viewCount": "Vista {index} de {count}", "help": "Amplía con los botones y desplázate dentro de la imagen con el dedo, el ratón o las flechas del teclado. Escape cierra el visor. La ampliación no añade detalle al original."}
   },
-  "team": {"title": "Equipo de desarrollo", "copyright": "© 2026 Felinaria."},
+  "team": {
+    "label": "Equipo de desarrollo", "title": "EL EQUIPO DETRÁS DE FELINARIA", "subtitle": "Seis integrantes, distintas especialidades y un objetivo compartido: dar vida al universo de Felinaria: El Último Presagio.", "count": "6 integrantes",
+    "groupLabels": {"product": "Gestión del producto", "narrative": "Diseño narrativo y conceptual"},
+    "members": {
+      "aldair": {"name": "Aldair Alejandro Ramos Díaz", "role": "Desarrollador Android y Firebase", "groups": {"responsibilities": ["Desarrollo de la aplicación móvil nativa en Android Studio.", "Gestión de la base de datos en Firebase.", "Sincronización y conexión en tiempo real entre la aplicación móvil y el videojuego."]}},
+      "brandon": {"name": "Brandon Eduardo Bernal Hernández", "role": "Desarrollador web y PWA", "groups": {"responsibilities": ["Desarrollo de la aplicación web en React.", "Implementación y configuración de la PWA.", "Adaptación para la instalación y el funcionamiento de la PWA."]}},
+      "diana": {"name": "Diana Laura Bernal Arias", "role": "Product Owner y diseñadora conceptual y narrativa", "groups": {
+        "product": ["Visión general del proyecto.", "Dirección de producto y coordinación de las entregas entre diseño y desarrollo."],
+        "narrative": ["Historia de Felinaria y mapa.", "Creación de Rastrojo y la espada negra.", "Creación de Rosa y la daga.", "Diseño de cinco variantes de pieles del protagonista.", "Creación de los enemigos perros de la Colonia del Colmillo."]
+      }},
+      "gilberto": {"name": "Gilberto Alonso Mendoza Salas", "role": "Diseñador conceptual de personajes y objetos", "groups": {"responsibilities": ["Creación del maestro Señor de los Cuervos.", "Diseño de los objetos especiales.", "Diseño de la poción de curación.", "Desarrollo de las animaciones de los personajes dentro del videojuego."]}},
+      "jose-carlos": {"name": "José Carlos Topete Sánchez", "role": "Programador de videojuegos Unity", "groups": {"responsibilities": ["Desarrollo del videojuego en Unity.", "Implementación del RPG.", "Desarrollo de los ocho niveles.", "Programación de las mecánicas principales."]}},
+      "sherlyn": {"name": "Sherlyn Vanessa Rosales García", "role": "Diseñadora UI/UX", "groups": {"responsibilities": ["Diseño de la interfaz de usuario de la aplicación móvil.", "Diseño de la experiencia de usuario de la aplicación móvil.", "Diseño de la interfaz de usuario de la plataforma web.", "Diseño de la experiencia de usuario de la plataforma web."]}}
+    },
+    "copyright": "© 2026 Felinaria."
+  },
   "status": {"offline": "Sin conexión · contenido disponible sin Internet", "workerError": "No se pudo registrar la aplicación sin conexión:"}
 }
